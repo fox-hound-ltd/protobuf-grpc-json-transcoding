@@ -1,0 +1,78 @@
+{
+  "name": "@fox-hound-tools/protobuf-grpc-json-transcoding",
+  "version": "0.1.0",
+  "author": "Fox Hound Ltd.",
+  "description": "TypeSpec library for emitting protobuf, gRPC and JSON transcoding",
+  "license": "MIT",
+  "readme": "https://github.com/fox-hound-ltd/protobuf-grpc-json-transcoding/blob/main/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fox-hound-ltd/protobuf-grpc-json-transcoding.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fox-hound-ltd/protobuf-grpc-json-transcoding/issues"
+  },
+  "keywords": [
+    "typespec"
+  ],
+  "type": "module",
+  "main": "dist/src/index.js",
+  "tspMain": "lib/main.tsp",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/src/index.js"
+    },
+    "./testing": {
+      "types": "./dist/src/testing/index.d.ts",
+      "default": "./dist/src/testing/index.js"
+    }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "lib/*.tsp",
+    "dist/**",
+    "google/api/*.proto",
+    "!dist/test/**"
+  ],
+  "peerDependencies": {
+    "@typespec/compiler": "latest",
+    "@typespec/http": "latest",
+    "@typespec/openapi": "latest",
+    "@typespec/openapi3": "latest",
+    "@typespec/protobuf": "latest",
+    "@typespec/rest": "latest",
+    "@typespec/versioning": "latest"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/node": "latest",
+    "@typespec/prettier-plugin-typespec": "latest",
+    "eslint": "^8.57.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5",
+    "typescript": "^5.3.3",
+    "typescript-eslint": "^7.1.1",
+    "vitest": "^1.3.1"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "test": "vitest run",
+    "lint": "eslint src/ test/ --report-unused-disable-directives --max-warnings=0",
+    "lint:fix": "eslint . --report-unused-disable-directives --fix",
+    "format": "prettier .  --write",
+    "format:check": "prettier --check .",
+    "prepare": "husky",
+    "sample:generate": "tsp compile ./sample --config sample/tspconfig.yaml"
+  },
+  "lint-staged": {
+    "*.{js,css,md,ts,json}": "prettier --write",
+    "*.{js,ts}": [
+      "eslint --fix --max-warnings 0 --debug"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+trailingComma: 'all'
+printWidth: 120
+quoteProps: 'consistent'
+endOfLine: lf
+arrowParens: always
+plugins:
+  - '@typespec/prettier-plugin-typespec'
+  - '@trivago/prettier-plugin-sort-imports'
+overrides: [{ 'files': '*.tsp', 'options': { 'parser': 'typespec' } }]
+singleQuote: true
+importOrderSeparation: true
+importOrderSortSpecifiers: true
+importOrder:
+  - '<THIRD_PARTY_MODULES>'
+  - '^[./]'

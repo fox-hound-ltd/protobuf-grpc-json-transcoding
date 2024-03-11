@@ -1,0 +1,5 @@
+emit:
+  - '@fox-hound-tools/protobuf-grpc-json-transcoding'
+options:
+  '@fox-hound-tools/protobuf-grpc-json-transcoding':
+    emitter-output-dir: '{project-root}/Proto'
