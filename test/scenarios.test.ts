@@ -37,4 +37,16 @@ describe('scenarios', () => {
       fs.readFileSync(__dirname + '/scenarios/multiple/expected/multiple.proto', { encoding: 'utf-8' }),
     );
   });
+  it(`emit no interface`, async () => {
+    const results = await emit(
+      fs.readFileSync(__dirname + '/scenarios/no-interface/input/main.tsp', { encoding: 'utf-8' }),
+      {
+        autoUsing: false,
+      },
+    );
+    expect(results['main.proto']).toBeDefined();
+    expect(results['main.proto']).toEqual(
+      fs.readFileSync(__dirname + '/scenarios/no-interface/expected/main.proto', { encoding: 'utf-8' }),
+    );
+  });
 });

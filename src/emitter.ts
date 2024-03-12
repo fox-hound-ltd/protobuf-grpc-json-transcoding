@@ -34,8 +34,7 @@ export async function $onEmit(context: EmitContext) {
             const document = getDocument(openapi3[key]);
             const paths = document.paths;
             let text = (await context.program.host.readFile(targetFile)).text;
-            // Add `import google/api/annotations.proto` to the file
-            text = applyImportGoogleApi(text);
+            let addImportGoogleApiAnnotationsLine = false;
             // Add `option (google.api.http)` to the file
             namespace.interfaces.forEach((i) => {
               // Get service from interface block
@@ -58,11 +57,16 @@ export async function $onEmit(context: EmitContext) {
                       `  }`;
                     generateGoogleApiProto = true;
                     operations = operations.replace(exp, newText);
+                    addImportGoogleApiAnnotationsLine = true;
                   }
                 }
               });
               text = replaceServiceOperations(text, i.name, operations);
             });
+            if (addImportGoogleApiAnnotationsLine) {
+              // Add `import google/api/annotations.proto` to the file
+              text = applyImportGoogleApi(text);
+            }
             context.program.host.writeFile(targetFile, text);
           }
         }
@@ -81,9 +85,9 @@ export async function $onEmit(context: EmitContext) {
  * @param text
  */
 function applyImportGoogleApi(text: string) {
-  const exp = new RegExp(/package (.*);\n\n/);
+  const exp = new RegExp(/package (.*);\n/);
   const exsitsAnotherImport = /import "google\/protobuf\/.*\.proto";/.test(text);
-  return text.replace(exp, `$&import "google/api/annotations.proto";\n${exsitsAnotherImport ? '' : '\n'}`);
+  return text.replace(exp, `$&\nimport "google/api/annotations.proto";${exsitsAnotherImport ? '' : '\n'}`);
 }
 
 /**
