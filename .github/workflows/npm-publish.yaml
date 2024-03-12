@@ -36,6 +36,9 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: pnpm install
       - run: pnpm build
-      - run: pnpm publish --access public
+      # --no-git-checks is set because of the following issues:
+      # https://github.com/pnpm/pnpm/issues/5894
+      # https://github.com/pnpm/pnpm/issues/2995
+      - run: pnpm publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
