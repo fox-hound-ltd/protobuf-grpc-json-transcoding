@@ -20,5 +20,11 @@ namespace Server
             _logger.LogInformation($"Sending hello to {request.Name} from {request.From}");
             return Task.FromResult(new HelloReply { Message = $"Hello {request.Name} from {request.From}" });
         }
+
+        public override Task<HelloReply> SayHelloFromWithType(HelloRequestFromWithType request, ServerCallContext context)
+        {
+            _logger.LogInformation($"Sending hello to {request.Params.Name} from {request.Params.From} by {request.Type}");
+            return Task.FromResult(new HelloReply { Message = $"Hello {request.Params.Name} from {request.Params.From} by {request.Type}" });
+        }
     }
 }

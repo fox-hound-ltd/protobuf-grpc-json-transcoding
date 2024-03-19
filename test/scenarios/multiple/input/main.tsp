@@ -4,10 +4,10 @@ import "@typespec/protobuf";
 using TypeSpec.Http;
 using TypeSpec.Protobuf;
 @TypeSpec.service({
-  title: "Multiple Service",
+  title: "Main",
 })
 @package({
-  name: "multiple",
+  name: "main",
 })
 namespace DemoService;
 
