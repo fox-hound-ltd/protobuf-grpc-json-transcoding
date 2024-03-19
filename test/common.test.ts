@@ -50,4 +50,37 @@ describe('common', () => {
         fs.readFileSync(__dirname + '/../google/api/annotations.proto', { encoding: 'utf-8' }),
     );
   });
+  it(`emit with multiple body not allowed`, async () => {
+    const results = await emit(`
+    @TypeSpec.service({
+      title: "Address Book",
+    })
+    @package({
+      name: "addressbook",
+    })
+    namespace AddressBookNamespace;
+    
+    model Book {
+      @field(1) id: string;
+      @field(2) author: Author;
+      @field(3) publisher: Publisher;
+    }
+    
+    model Author {
+      @field(1) id: string;
+      @field(2) name: string;
+    }
+    
+    model Publisher {
+      @field(1) id: string;
+      @field(2) name: string;
+    }
+
+    @Protobuf.service interface AddressBook {
+      @post @route("book/{id}") Edit(...Book): Book;
+    }`);
+    expect(results['google/api/http.proto']).toBeUndefined();
+    expect(results['google/api/annotations.proto']).toBeUndefined();
+    expect(results['addressbook.proto']).not.toMatch(/option \(google.api.http\)/);
+  });
 });

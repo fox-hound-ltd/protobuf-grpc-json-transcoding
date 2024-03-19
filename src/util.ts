@@ -127,10 +127,12 @@ export function getPath(paths: OpenAPI3Document['paths'], interfaceName: string,
   return result;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+/**
+ * Get option contents from OpenAPI3Operation.
+ */
 export function getOpetionContents(path: string, method: string, operation: OpenAPI3Operation): string {
   if (method === 'get') {
-    return `      get: "${path}"\n`;
+    return indent(`get: "${path}"`);
   }
   if (method === 'post') {
     // Map required fields to body
@@ -144,22 +146,29 @@ export function getOpetionContents(path: string, method: string, operation: Open
       Array.isArray(operation.requestBody.content['application/json'].schema.required)
     ) {
       const required: string[] = operation.requestBody.content['application/json'].schema.required;
-      // TODO: if required count > 1, to error.
-      return `      post: "${path}"\n` + `      body: "${required.join()}"\n`;
+      // Multiple body is not allowed.
+      if (required.length > 1) {
+        return '';
+      }
+      return indent(`post: "${path}"`) + indent(`body: "${required.join()}"`);
     }
     // TODO: support custom response_body
-    return `      post: "${path}"\n` + `      body: "*"\n`;
+    return indent(`post: "${path}"`) + indent(`body: "*"`);
   }
   if (method === 'put') {
-    return `      put: "${path}"\n` + `      body: "*"\n`;
+    return indent(`put: "${path}"`) + indent(`body: "*"`);
   }
   if (method === 'patch') {
-    return `      patch: "${path}"\n` + `      body: "*"\n`;
+    return indent(`patch: "${path}"`) + indent(`body: "*"`);
   }
   if (method === 'delete') {
-    return `      delete: "${path}"\n`;
+    return indent(`delete: "${path}"`);
   }
   return '';
+
+  function indent(s: string) {
+    return `      ${s}\n`;
+  }
 }
 
 /**

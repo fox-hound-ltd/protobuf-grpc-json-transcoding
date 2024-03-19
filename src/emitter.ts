@@ -49,10 +49,14 @@ export async function $onEmit(context: EmitContext) {
                   const [, req, res] = result;
                   const path = getPath(paths, i.name, operationName);
                   if (path.result) {
+                    const content = getOpetionContents(path.path, path.method, path.operation);
+                    if (!content) {
+                      return;
+                    }
                     const newText =
                       `  rpc ${capitalize(operationName)}(${req}) returns (${res}) {\n` +
                       `    option (google.api.http) = {\n` +
-                      getOpetionContents(path.path, path.method, path.operation) +
+                      content +
                       `    };\n` +
                       `  }`;
                     generateGoogleApiProto = true;
