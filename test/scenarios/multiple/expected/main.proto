@@ -2,7 +2,7 @@
 
 syntax = "proto3";
 
-package multiple;
+package main;
 
 import "google/api/annotations.proto";
 

@@ -29,7 +29,10 @@
     }
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18.0.0",
+    "pnpm": ">=7.0.0",
+    "npm": "Please use pnpm instead of NPM to install dependencies",
+    "yarn": "Please use pnpm instead of YARN to install dependencies"
   },
   "files": [
     "lib/*.tsp",
@@ -38,13 +41,13 @@
     "!dist/test/**"
   ],
   "peerDependencies": {
-    "@typespec/compiler": "latest",
-    "@typespec/http": "latest",
-    "@typespec/openapi": "latest",
-    "@typespec/openapi3": "latest",
-    "@typespec/protobuf": "latest",
-    "@typespec/rest": "latest",
-    "@typespec/versioning": "latest"
+    "@typespec/compiler": "0.x",
+    "@typespec/http": "0.x",
+    "@typespec/openapi": "0.x",
+    "@typespec/openapi3": "0.x",
+    "@typespec/protobuf": "0.x",
+    "@typespec/rest": "0.x",
+    "@typespec/versioning": "0.x"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
@@ -55,8 +58,8 @@
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "typescript": "^5.3.3",
-    "typescript-eslint": "^7.1.1",
-    "vitest": "^1.3.1"
+    "typescript-eslint": "^7.3.1",
+    "vitest": "^1.4.0"
   },
   "scripts": {
     "build": "tsc",

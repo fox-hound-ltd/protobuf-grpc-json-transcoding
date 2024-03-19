@@ -11,7 +11,7 @@ describe('common', () => {
     })
     namespace AddressBook;
     @Protobuf.service interface AddressBook {
-      Get(...WellKnown.Empty): WellKnown.Empty;
+      Get(): WellKnown.Empty;
     }`);
     expect(results['directory/addressbook.proto']).match(/package directory\.addressbook/);
   });
@@ -22,7 +22,7 @@ describe('common', () => {
     })
     namespace AddressBook;
     @Protobuf.service interface AddressBook {
-      Get(...WellKnown.Empty): WellKnown.Empty;
+      Get(): WellKnown.Empty;
     }`);
     expect(results['google/api/http.proto']).toBeUndefined();
   });
@@ -37,7 +37,7 @@ describe('common', () => {
     namespace AddressBookNamespace;
 
     @Protobuf.service interface AddressBook {
-      @get @route("book") Get(...WellKnown.Empty): WellKnown.Empty;
+      @get @route("book") Get(): WellKnown.Empty;
     }`);
     expect(results['google/api/http.proto']).toBeDefined();
     expect(results['google/api/http.proto']).toEqual(

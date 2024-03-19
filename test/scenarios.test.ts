@@ -26,27 +26,28 @@ describe('scenarios', () => {
     );
   });
   it(`emit multiple service`, async () => {
-    const results = await emit(
-      fs.readFileSync(__dirname + '/scenarios/multiple/input/main.tsp', { encoding: 'utf-8' }),
-      {
-        autoUsing: false,
-      },
-    );
-    expect(results['multiple.proto']).toBeDefined();
-    expect(results['multiple.proto']).toEqual(
-      fs.readFileSync(__dirname + '/scenarios/multiple/expected/multiple.proto', { encoding: 'utf-8' }),
-    );
+    await fileTest('multiple');
   });
   it(`emit no interface`, async () => {
-    const results = await emit(
-      fs.readFileSync(__dirname + '/scenarios/no-interface/input/main.tsp', { encoding: 'utf-8' }),
-      {
-        autoUsing: false,
-      },
-    );
-    expect(results['main.proto']).toBeDefined();
-    expect(results['main.proto']).toEqual(
-      fs.readFileSync(__dirname + '/scenarios/no-interface/expected/main.proto', { encoding: 'utf-8' }),
-    );
+    await fileTest('no-interface');
+  });
+  it(`emit multi params binding route`, async () => {
+    await fileTest('multi-params-binding-route');
+  });
+  it(`emit custom request body`, async () => {
+    await fileTest('custom-request-body');
   });
 });
+
+/**
+ * Testing with fixed paths and file names
+ */
+async function fileTest(path: string) {
+  const results = await emit(fs.readFileSync(__dirname + `/scenarios/${path}/input/main.tsp`, { encoding: 'utf-8' }), {
+    autoUsing: false,
+  });
+  expect(results['main.proto']).toBeDefined();
+  expect(results['main.proto']).toEqual(
+    fs.readFileSync(__dirname + `/scenarios/${path}/expected/main.proto`, { encoding: 'utf-8' }),
+  );
+}

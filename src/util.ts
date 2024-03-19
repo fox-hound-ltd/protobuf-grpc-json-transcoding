@@ -133,7 +133,20 @@ export function getOpetionContents(path: string, method: string, operation: Open
     return `      get: "${path}"\n`;
   }
   if (method === 'post') {
-    // TODO: support map request body
+    // Map required fields to body
+    if (
+      operation.parameters.length > 0 &&
+      operation.requestBody &&
+      operation.requestBody.content &&
+      operation.requestBody.content['application/json'] &&
+      operation.requestBody.content['application/json'].schema &&
+      operation.requestBody.content['application/json'].schema.required &&
+      Array.isArray(operation.requestBody.content['application/json'].schema.required)
+    ) {
+      const required: string[] = operation.requestBody.content['application/json'].schema.required;
+      // TODO: if required count > 1, to error.
+      return `      post: "${path}"\n` + `      body: "${required.join()}"\n`;
+    }
     // TODO: support custom response_body
     return `      post: "${path}"\n` + `      body: "*"\n`;
   }

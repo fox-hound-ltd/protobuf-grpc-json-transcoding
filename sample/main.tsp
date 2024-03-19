@@ -4,7 +4,7 @@ import "@typespec/protobuf";
 using TypeSpec.Http;
 using TypeSpec.Protobuf;
 @TypeSpec.service({
-  title: "Greet Service",
+  title: "Greet",
 })
 @package({
   name: "greet",
@@ -31,6 +31,18 @@ model HelloRequestFrom {
   from: string;
 }
 
+@doc("HelloRequestFromWithType!")
+@message
+model HelloRequestFromWithType {
+  @field(1)
+  @doc("Type!")
+  type: string;
+
+  @field(2)
+  @doc("Params!")
+  params: HelloRequestFrom;
+}
+
 @doc("HelloReply!")
 @message
 model HelloReply {
@@ -51,4 +63,9 @@ interface Greeter {
   @doc("SayHelloFrom method!")
   @post
   SayHelloFrom(...HelloRequestFrom): HelloReply;
+
+  @doc("SayHelloFromWithType method!")
+  @post
+  @route("/type/{type}")
+  SayHelloFromWithType(...HelloRequestFromWithType): HelloReply;
 }
