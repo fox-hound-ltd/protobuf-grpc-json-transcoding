@@ -36,7 +36,7 @@ devDependencies:
     version: 20.12.5
   '@typespec/prettier-plugin-typespec':
     specifier: latest
-    version: 0.55.0
+    version: 0.56.0-dev.2
   eslint:
     specifier: ^8.57.0
     version: 8.57.0
@@ -846,8 +846,8 @@ packages:
       '@typespec/http': 0.54.0(@typespec/compiler@0.54.0)
     dev: false
 
-  /@typespec/prettier-plugin-typespec@0.55.0:
-    resolution: {integrity: sha512-CrrZbN3EmT4rMckthSYZ2VeIET1pi2IAM/W9jN8pPfyqvidDhc/uCEy3gfbc9wvFKejC5Ykc/qE5MO79xvgH4Q==}
+  /@typespec/prettier-plugin-typespec@0.56.0-dev.2:
+    resolution: {integrity: sha512-V9KbD6g72MiHJmS7gpagpxY6ui1dz1wG24ViSHq+IywrqCF8Bb7SDZIB+uEOMEFadrD7ojG0V6aUgwDZsdUHng==}
     dependencies:
       prettier: 3.2.5
     dev: true
