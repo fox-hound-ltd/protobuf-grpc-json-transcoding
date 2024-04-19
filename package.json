@@ -57,9 +57,9 @@
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
-    "typescript": "^5.3.3",
-    "typescript-eslint": "^7.3.1",
-    "vitest": "^1.4.0"
+    "typescript": "~5.3.3",
+    "typescript-eslint": "^7.7.0",
+    "vitest": "^1.5.0"
   },
   "scripts": {
     "build": "tsc",
@@ -67,7 +67,7 @@
     "test": "vitest run",
     "lint": "eslint src/ test/ --report-unused-disable-directives --max-warnings=0",
     "lint:fix": "eslint . --report-unused-disable-directives --fix",
-    "format": "prettier .  --write",
+    "format": "prettier . --write",
     "format:check": "prettier --check .",
     "prepare": "husky",
     "sample:generate": "tsp compile ./sample --config sample/tspconfig.yaml"
