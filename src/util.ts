@@ -13,7 +13,7 @@ export function getFilePathAndName(namespace: Namespace): [string, string] {
   namespace.decorators.forEach((decorator) => {
     if (decorator.definition?.name === '@package') {
       decorator.args.forEach((argument) => {
-        if (argument.value.kind === 'Model') {
+        if (argument.value.entityKind === 'Type' && argument.value.kind === 'Model') {
           packageName = (
             (argument.value.properties.get('name') as ModelProperty | undefined)?.type as StringLiteral | undefined
           )?.value;
