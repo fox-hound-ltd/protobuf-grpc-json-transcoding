@@ -34,6 +34,7 @@ export async function exsitsFile(program: Program, path: string): Promise<boolea
   try {
     return (await program.host.stat(path)).isFile();
   } catch (error) {
+    console.warn(error);
     return false;
   }
 }
@@ -141,18 +142,22 @@ export function getOpetionContents(path: string, method: string, operation: Open
       operation.requestBody &&
       operation.requestBody.content &&
       operation.requestBody.content['application/json'] &&
-      operation.requestBody.content['application/json'].schema &&
-      operation.requestBody.content['application/json'].schema.required &&
-      Array.isArray(operation.requestBody.content['application/json'].schema.required)
+      operation.requestBody.content['application/json'].schema
     ) {
-      const required: string[] = operation.requestBody.content['application/json'].schema.required;
-      // Multiple body is not allowed.
-      if (required.length > 1) {
-        return '';
+      const schema = operation.requestBody.content['application/json'].schema;
+
+      if (Object.hasOwnProperty.call(schema, 'required')) {
+        const notRefSchema = schema as Extract<typeof schema, { required?: string[] }>;
+        if (Array.isArray(notRefSchema.required) && notRefSchema.required) {
+          const required: string[] = notRefSchema.required;
+          // Multiple body is not allowed.
+          if (required.length > 1) {
+            return '';
+          }
+          return indent(`post: "${path}"`) + indent(`body: "${required.join()}"`);
+        }
       }
-      return indent(`post: "${path}"`) + indent(`body: "${required.join()}"`);
     }
-    // TODO: support custom response_body
     return indent(`post: "${path}"`) + indent(`body: "*"`);
   }
   if (method === 'put') {
