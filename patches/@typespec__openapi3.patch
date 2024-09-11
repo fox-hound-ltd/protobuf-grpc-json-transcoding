@@ -1,0 +1,11 @@
+diff --git a/dist/src/index.d.ts b/dist/src/index.d.ts
+index 25626474e4100329cdac7bdde191339600e5cd4f..72d5fccc707c65dcff4c4ec45e25e2b2163735bb 100644
+--- a/dist/src/index.d.ts
++++ b/dist/src/index.d.ts
+@@ -3,5 +3,5 @@ export { convertOpenAPI3Document } from "./cli/actions/convert/convert.js";
+ export * from "./decorators.js";
+ export { $lib } from "./lib.js";
+ export * from "./openapi.js";
+-export { $decorators } from "./tsp-index.js";
++// export { $decorators } from "./tsp-index.js";
+ //# sourceMappingURL=index.d.ts.map
