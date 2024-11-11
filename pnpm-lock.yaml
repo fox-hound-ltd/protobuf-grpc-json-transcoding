@@ -14,23 +14,23 @@ importers:
   .:
     dependencies:
       '@typespec/compiler':
-        specifier: ~0.61.0
-        version: 0.61.2
+        specifier: ~0.62.0
+        version: 0.62.0
       '@typespec/http':
-        specifier: ~0.61.0
-        version: 0.61.0(@typespec/compiler@0.61.2)
+        specifier: ~0.62.0
+        version: 0.62.0(@typespec/compiler@0.62.0)
       '@typespec/openapi':
-        specifier: ~0.61.0
-        version: 0.61.0(@typespec/compiler@0.61.2)(@typespec/http@0.61.0(@typespec/compiler@0.61.2))
+        specifier: ~0.62.0
+        version: 0.62.0(@typespec/compiler@0.62.0)(@typespec/http@0.62.0(@typespec/compiler@0.62.0))
       '@typespec/openapi3':
-        specifier: ~0.61.0
-        version: 0.61.0(patch_hash=mbwuzk7cgukr4aqout2qfqtfja)(@typespec/compiler@0.61.2)(@typespec/http@0.61.0(@typespec/compiler@0.61.2))(@typespec/openapi@0.61.0(@typespec/compiler@0.61.2)(@typespec/http@0.61.0(@typespec/compiler@0.61.2)))(@typespec/versioning@0.61.0(@typespec/compiler@0.61.2))(openapi-types@12.1.3)
+        specifier: ~0.62.0
+        version: 0.62.0(patch_hash=mbwuzk7cgukr4aqout2qfqtfja)(@typespec/compiler@0.62.0)(@typespec/http@0.62.0(@typespec/compiler@0.62.0))(@typespec/openapi@0.62.0(@typespec/compiler@0.62.0)(@typespec/http@0.62.0(@typespec/compiler@0.62.0)))(@typespec/versioning@0.62.0(@typespec/compiler@0.62.0))(openapi-types@12.1.3)
       '@typespec/protobuf':
-        specifier: ~0.61.0
-        version: 0.61.0(@typespec/compiler@0.61.2)
+        specifier: ~0.62.0
+        version: 0.62.0(@typespec/compiler@0.62.0)
       '@typespec/versioning':
-        specifier: ~0.61.0
-        version: 0.61.0(@typespec/compiler@0.61.2)
+        specifier: ~0.62.0
+        version: 0.62.0(@typespec/compiler@0.62.0)
     devDependencies:
       '@trivago/prettier-plugin-sort-imports':
         specifier: ^4.3.0
@@ -42,10 +42,10 @@ importers:
         specifier: latest
         version: 0.62.0
       eslint:
-        specifier: ^9.12.0
+        specifier: ^9.14.0
         version: 9.14.0
       globals:
-        specifier: ^15.11.0
+        specifier: ^15.12.0
         version: 15.12.0
       husky:
         specifier: ^9.1.6
@@ -60,10 +60,10 @@ importers:
         specifier: ~5.6.3
         version: 5.6.3
       typescript-eslint:
-        specifier: ^8.8.1
+        specifier: ^8.13.0
         version: 8.13.0(eslint@9.14.0)(typescript@5.6.3)
       vitest:
-        specifier: ^2.1.2
+        specifier: ^2.1.4
         version: 2.1.4(@types/node@22.9.0)
 
 packages:
@@ -73,6 +73,10 @@ packages:
 
   '@babel/code-frame@7.24.7':
     resolution: {integrity: sha512-BcYH1CVJBO9tvyIZ2jVeXgSIMvGZ2FDRvDdOIVQyuklNKSsx+eppDEBq/g47Ayw+RqNFE+URvOShmf+f/qwAlA==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/code-frame@7.25.9':
+    resolution: {integrity: sha512-z88xeGxnzehn2sqZ8UdGQEvYErF1odv2CftxInpSYJt6uHuPe9YjahKZITGs3l5LeI9d2ROG+obuDAoSlqbNfQ==}
     engines: {node: '>=6.9.0'}
 
   '@babel/generator@7.17.7':
@@ -107,8 +111,16 @@ packages:
     resolution: {integrity: sha512-rR+PBcQ1SMQDDyF6X0wxtG8QyLCgUB0eRAGguqRLfkCA87l7yAP7ehq8SNj96OOGTO8OBV70KhuFYcIkHXOg0w==}
     engines: {node: '>=6.9.0'}
 
+  '@babel/helper-validator-identifier@7.25.9':
+    resolution: {integrity: sha512-Ed61U6XJc3CVRfkERJWDz4dJwKe7iLmmJsbOGu9wSloNSFttHV0I8g6UAgb7qnK5ly5bGLPd4oXZlxCdANBOWQ==}
+    engines: {node: '>=6.9.0'}
+
   '@babel/highlight@7.24.7':
     resolution: {integrity: sha512-EStJpq4OuY8xYfhGVXngigBJRWxftKX9ksiGDnmlY3o7B/V7KIAc9X4oiK87uPJSc/vs5L869bem5fhZa8caZw==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/highlight@7.25.9':
+    resolution: {integrity: sha512-llL88JShoCsth8fF8R4SJnIn+WLvR6ccFxu1H3FlMhDontdcmZWf2HgIZ7AIqV3Xcck1idlohrN4EUBQz6klbw==}
     engines: {node: '>=6.9.0'}
 
   '@babel/parser@7.25.3':
@@ -546,51 +558,55 @@ packages:
     resolution: {integrity: sha512-7N/+lztJqH4Mrf0lb10R/CbI1EaAMMGyF5y0oJvFoAhafwgiRA7TXyd8TFn8FC8k5y2dTsYogg238qavRGNnlw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@typespec/compiler@0.61.2':
-    resolution: {integrity: sha512-6QxYJd09VWssd/BvY+8eBxTVv085s1UNK63FdPrgT2lgI+j8VMMcpNR9m5l1zWlgGDM7sniA/Or8VCdVA6jerg==}
+  '@typespec/compiler@0.62.0':
+    resolution: {integrity: sha512-RfKJ/rF2Wjxu7dl74oJE8yEfSkeL7NopFlyJ4dW1JQXpRN2IOJYPxas12qZA6H9ZEIB8rBjyrHNxJSQbvn/UDQ==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
-  '@typespec/http@0.61.0':
-    resolution: {integrity: sha512-7+AYHkzkc+p652GY9BcEbXY4OZa1fTr03MVmZeafvmbQbXfyzUU9eJld13M3v6NaUWqXWZ7nBNMISyKiXp/kSw==}
+  '@typespec/http@0.62.0':
+    resolution: {integrity: sha512-6H9y9e32lb2s76MMy29ITCwSZNG42sa/qWthiByUvfbTEXMpu5a1fQHNj7RXg+xmDKmVIHv3gAfjGPAWfXhkaQ==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
-      '@typespec/compiler': ~0.61.0
-      '@typespec/streams': ~0.61.0
+      '@typespec/compiler': ~0.62.0
+      '@typespec/streams': ~0.62.0
     peerDependenciesMeta:
       '@typespec/streams':
         optional: true
 
-  '@typespec/openapi3@0.61.0':
-    resolution: {integrity: sha512-ALLsTkK1UiJBzvygV1Zk/yZaym+lOWroGeEUhQNXYShsq+/GLZkK0rl8sd76Gigq+TVXKMOEwUUvgfws/LMUJw==}
+  '@typespec/openapi3@0.62.0':
+    resolution: {integrity: sha512-tfmaPvZ38fM+O5+ZBq4ic7fc32E3v0JOFP9h+7otQyrVprLVCToXpBwaxB7c2nTSJbI4vcxK7/T3Z8BD5j8X+w==}
     engines: {node: '>=18.0.0'}
     hasBin: true
     peerDependencies:
-      '@typespec/compiler': ~0.61.0
-      '@typespec/http': ~0.61.0
-      '@typespec/openapi': ~0.61.0
-      '@typespec/versioning': ~0.61.0
+      '@typespec/compiler': ~0.62.0
+      '@typespec/http': ~0.62.0
+      '@typespec/openapi': ~0.62.0
+      '@typespec/versioning': ~0.62.0
+      '@typespec/xml': '*'
+    peerDependenciesMeta:
+      '@typespec/xml':
+        optional: true
 
-  '@typespec/openapi@0.61.0':
-    resolution: {integrity: sha512-3AF319Ae4yGVOscsCLQeedXUJJcL/NdGOR2/e/nFiL/AOVdgLfIRnpR0Ad9Zj9XAESh1fq9XSu4Mi7N1k4V7rw==}
+  '@typespec/openapi@0.62.0':
+    resolution: {integrity: sha512-Xtm0Nd2BuSmEfSWGtc10ok22jyomYm9L2jY+kVTy+v5J89DrVh0o6+YpipUl1QhcItM1YMBphWHIHPfwkDRbnw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
-      '@typespec/compiler': ~0.61.0
-      '@typespec/http': ~0.61.0
+      '@typespec/compiler': ~0.62.0
+      '@typespec/http': ~0.62.0
 
   '@typespec/prettier-plugin-typespec@0.62.0':
     resolution: {integrity: sha512-VJRtX4RcUYE0qiQpKL8K7Mgfozy/icieaoap44XR+2OmWegZmuR1Qjq5iWtjLBS7MFwSXHel+BT/LBlqu1v+dA==}
 
-  '@typespec/protobuf@0.61.0':
-    resolution: {integrity: sha512-VXqk3ZLmeUemtWy8dzKWEWG3+kHS7T57P4lqP9KMZEurxSOPFw0qN5+EDPY9295HFky7Yz6oHj9xllYn3XKiTw==}
+  '@typespec/protobuf@0.62.0':
+    resolution: {integrity: sha512-Lo5Jy7jy22pIfuwA+w7RtJBFEBNCZ1nEwP16dUxexeai6Ti3Dy5ciU/hz+Woke6q5Zfw/umxe714+KevCYDDJg==}
     peerDependencies:
-      '@typespec/compiler': ~0.61.0
+      '@typespec/compiler': ~0.62.0
 
-  '@typespec/versioning@0.61.0':
-    resolution: {integrity: sha512-PIIug6eg3zc7E+BBHyNHHQD+OBq3FU465nhKrLEp35iVji/sYFuPc1ywnELDuwJVRWm6nvqNL1vtnc+4lEk+oA==}
+  '@typespec/versioning@0.62.0':
+    resolution: {integrity: sha512-M5KTCVH5fBniZU8eQlw+NV13vAmPr58HyBLDIyxeOuV+SHNlx+f+qanUEDIPaJheKlaSSNTEZKsDhs83/iIMMA==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
-      '@typespec/compiler': ~0.61.0
+      '@typespec/compiler': ~0.62.0
 
   '@vitest/expect@2.1.4':
     resolution: {integrity: sha512-DOETT0Oh1avie/D/o2sgMHGrzYUFFo3zqESB2Hn70z6QB1HrS2IQ9z5DfyTqU8sg4Bpu13zZe9V4+UTNQlUeQA==}
@@ -1559,6 +1575,11 @@ snapshots:
       '@babel/highlight': 7.24.7
       picocolors: 1.1.0
 
+  '@babel/code-frame@7.25.9':
+    dependencies:
+      '@babel/highlight': 7.25.9
+      picocolors: 1.1.0
+
   '@babel/generator@7.17.7':
     dependencies:
       '@babel/types': 7.25.2
@@ -1593,9 +1614,18 @@ snapshots:
 
   '@babel/helper-validator-identifier@7.24.7': {}
 
+  '@babel/helper-validator-identifier@7.25.9': {}
+
   '@babel/highlight@7.24.7':
     dependencies:
       '@babel/helper-validator-identifier': 7.24.7
+      chalk: 2.4.2
+      js-tokens: 4.0.0
+      picocolors: 1.1.0
+
+  '@babel/highlight@7.25.9':
+    dependencies:
+      '@babel/helper-validator-identifier': 7.25.9
       chalk: 2.4.2
       js-tokens: 4.0.0
       picocolors: 1.1.0
@@ -1979,9 +2009,9 @@ snapshots:
       '@typescript-eslint/types': 8.13.0
       eslint-visitor-keys: 3.4.3
 
-  '@typespec/compiler@0.61.2':
+  '@typespec/compiler@0.62.0':
     dependencies:
-      '@babel/code-frame': 7.24.7
+      '@babel/code-frame': 7.25.9
       ajv: 8.17.1
       change-case: 5.4.4
       globby: 14.0.2
@@ -1996,37 +2026,37 @@ snapshots:
       yaml: 2.5.1
       yargs: 17.7.2
 
-  '@typespec/http@0.61.0(@typespec/compiler@0.61.2)':
+  '@typespec/http@0.62.0(@typespec/compiler@0.62.0)':
     dependencies:
-      '@typespec/compiler': 0.61.2
+      '@typespec/compiler': 0.62.0
 
-  '@typespec/openapi3@0.61.0(patch_hash=mbwuzk7cgukr4aqout2qfqtfja)(@typespec/compiler@0.61.2)(@typespec/http@0.61.0(@typespec/compiler@0.61.2))(@typespec/openapi@0.61.0(@typespec/compiler@0.61.2)(@typespec/http@0.61.0(@typespec/compiler@0.61.2)))(@typespec/versioning@0.61.0(@typespec/compiler@0.61.2))(openapi-types@12.1.3)':
+  '@typespec/openapi3@0.62.0(patch_hash=mbwuzk7cgukr4aqout2qfqtfja)(@typespec/compiler@0.62.0)(@typespec/http@0.62.0(@typespec/compiler@0.62.0))(@typespec/openapi@0.62.0(@typespec/compiler@0.62.0)(@typespec/http@0.62.0(@typespec/compiler@0.62.0)))(@typespec/versioning@0.62.0(@typespec/compiler@0.62.0))(openapi-types@12.1.3)':
     dependencies:
       '@readme/openapi-parser': 2.6.0(openapi-types@12.1.3)
-      '@typespec/compiler': 0.61.2
-      '@typespec/http': 0.61.0(@typespec/compiler@0.61.2)
-      '@typespec/openapi': 0.61.0(@typespec/compiler@0.61.2)(@typespec/http@0.61.0(@typespec/compiler@0.61.2))
-      '@typespec/versioning': 0.61.0(@typespec/compiler@0.61.2)
+      '@typespec/compiler': 0.62.0
+      '@typespec/http': 0.62.0(@typespec/compiler@0.62.0)
+      '@typespec/openapi': 0.62.0(@typespec/compiler@0.62.0)(@typespec/http@0.62.0(@typespec/compiler@0.62.0))
+      '@typespec/versioning': 0.62.0(@typespec/compiler@0.62.0)
       yaml: 2.5.1
     transitivePeerDependencies:
       - openapi-types
 
-  '@typespec/openapi@0.61.0(@typespec/compiler@0.61.2)(@typespec/http@0.61.0(@typespec/compiler@0.61.2))':
+  '@typespec/openapi@0.62.0(@typespec/compiler@0.62.0)(@typespec/http@0.62.0(@typespec/compiler@0.62.0))':
     dependencies:
-      '@typespec/compiler': 0.61.2
-      '@typespec/http': 0.61.0(@typespec/compiler@0.61.2)
+      '@typespec/compiler': 0.62.0
+      '@typespec/http': 0.62.0(@typespec/compiler@0.62.0)
 
   '@typespec/prettier-plugin-typespec@0.62.0':
     dependencies:
       prettier: 3.3.3
 
-  '@typespec/protobuf@0.61.0(@typespec/compiler@0.61.2)':
+  '@typespec/protobuf@0.62.0(@typespec/compiler@0.62.0)':
     dependencies:
-      '@typespec/compiler': 0.61.2
+      '@typespec/compiler': 0.62.0
 
-  '@typespec/versioning@0.61.0(@typespec/compiler@0.61.2)':
+  '@typespec/versioning@0.62.0(@typespec/compiler@0.62.0)':
     dependencies:
-      '@typespec/compiler': 0.61.2
+      '@typespec/compiler': 0.62.0
 
   '@vitest/expect@2.1.4':
     dependencies:
