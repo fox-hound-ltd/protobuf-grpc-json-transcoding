@@ -167,6 +167,15 @@ export function getOpetionContents(path: string, method: string, operation: Open
     return indent(`patch: "${path}"`) + indent(`body: "*"`);
   }
   if (method === 'delete') {
+    // Add body if required.
+    if (
+      operation.parameters.length > 0 &&
+      operation.requestBody &&
+      operation.requestBody.content &&
+      operation.requestBody.content['application/json']
+    ) {
+      return indent(`delete: "${path}"`) + indent(`body: "*"`);
+    }
     return indent(`delete: "${path}"`);
   }
   return '';

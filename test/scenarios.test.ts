@@ -37,6 +37,9 @@ describe('scenarios', () => {
   it(`emit custom request body`, async () => {
     await fileTest('custom-request-body');
   });
+  it(`emit delete body`, async () => {
+    await fileTest('delete-body');
+  });
 });
 
 /**
