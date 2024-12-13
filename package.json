@@ -38,25 +38,25 @@
     "!dist/test/**"
   ],
   "dependencies": {
-    "@typespec/compiler": "~0.62.0",
-    "@typespec/http": "~0.62.0",
-    "@typespec/openapi": "~0.62.0",
-    "@typespec/openapi3": "~0.62.0",
-    "@typespec/protobuf": "~0.62.0",
-    "@typespec/versioning": "~0.62.0"
+    "@typespec/compiler": "~0.63.0",
+    "@typespec/http": "~0.63.0",
+    "@typespec/openapi": "~0.63.0",
+    "@typespec/openapi3": "~0.63.0",
+    "@typespec/protobuf": "~0.63.0",
+    "@typespec/versioning": "~0.63.0"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^5.2.0",
     "@types/node": "latest",
     "@typespec/prettier-plugin-typespec": "latest",
-    "eslint": "^9.14.0",
-    "globals": "^15.12.0",
-    "husky": "^9.1.6",
-    "lint-staged": "^15.2.10",
-    "prettier": "^3.3.3",
+    "eslint": "^9.16.0",
+    "globals": "^15.13.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
+    "prettier": "^3.4.2",
     "typescript": "~5.6.3",
-    "typescript-eslint": "^8.13.0",
-    "vitest": "^2.1.4"
+    "typescript-eslint": "^8.18.0",
+    "vitest": "^2.1.8"
   },
   "scripts": {
     "build": "tsc",
@@ -75,7 +75,7 @@
       "eslint --fix --max-warnings 0 --debug"
     ]
   },
-  "packageManager": "pnpm@9.12.1+sha512.e5a7e52a4183a02d5931057f7a0dbff9d5e9ce3161e33fa68ae392125b79282a8a8a470a51dfc8a0ed86221442eb2fb57019b0990ed24fab519bf0e1bc5ccfc4",
+  "packageManager": "pnpm@9.15.0+sha256.09a8fe31a34fda706354680619f4002f4ccef6dadff93240d24ef6c831f0fd28",
   "pnpm": {
     "patchedDependencies": {
       "@typespec/openapi3": "patches/@typespec__openapi3.patch"
