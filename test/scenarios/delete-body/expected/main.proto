@@ -12,6 +12,10 @@ message DeleteBodyRequest {
   string body = 2;
 }
 
+message NoRouteBodyRequest {
+  string body = 1;
+}
+
 message DeleteRequest {
   string id = 1;
 }
@@ -25,6 +29,12 @@ service Service {
   rpc DeleteBody(DeleteBodyRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       delete: "/v1/body/{id}"
+      body: "*"
+    };
+  }
+  rpc NoRouteBody(NoRouteBodyRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      delete: "/v1/no-route-body"
       body: "*"
     };
   }

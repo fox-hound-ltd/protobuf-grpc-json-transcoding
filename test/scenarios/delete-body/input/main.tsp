@@ -20,6 +20,11 @@ model DeleteBodyRequest {
   @field(2) body: string;
 }
 
+@message
+model NoRouteBodyRequest {
+  @field(1) body: string;
+}
+
 @Protobuf.service
 @route("/v1")
 interface Service {
@@ -29,4 +34,7 @@ interface Service {
   @route("/body/{id}")
   @delete
   DeleteBody(...DeleteBodyRequest): void;
+  @route("/no-route-body")
+  @delete
+  NoRouteBody(...NoRouteBodyRequest): void;
 }
