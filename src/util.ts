@@ -168,12 +168,7 @@ export function getOpetionContents(path: string, method: string, operation: Open
   }
   if (method === 'delete') {
     // Add body if required.
-    if (
-      operation.parameters.length > 0 &&
-      operation.requestBody &&
-      operation.requestBody.content &&
-      operation.requestBody.content['application/json']
-    ) {
+    if (operation.requestBody && operation.requestBody.content && operation.requestBody.content['application/json']) {
       return indent(`delete: "${path}"`) + indent(`body: "*"`);
     }
     return indent(`delete: "${path}"`);
