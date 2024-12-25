@@ -10,6 +10,7 @@ import {
 import { namespace as httpNamespace } from '@typespec/http';
 import { HttpTestLibrary } from '@typespec/http/testing';
 import { namespace as protobufNamespace } from '@typespec/protobuf';
+import { RestTestLibrary } from '@typespec/rest/testing';
 
 import { ProtobufGrpcJsonTranscodingTestLibrary } from '../src/testing/index.js';
 
@@ -26,6 +27,7 @@ export async function createProtobufGrpcJsonTranscodingTestHost() {
         packageRoot: resolvePath(await findTestPackageRoot(import.meta.url), 'node_modules', '@typespec/protobuf'),
       }),
       HttpTestLibrary,
+      RestTestLibrary,
     ],
   });
 }
@@ -38,7 +40,7 @@ export async function createProtobufGrpcJsonTranscodingTestRunner(options: TestE
       noEmit: false,
       emit: ['@fox-hound-tools/protobuf-grpc-json-transcoding'],
     },
-    autoUsings: options.autoUsing ? [protobufNamespace, httpNamespace] : [],
+    autoUsings: options.autoUsing ? [protobufNamespace, httpNamespace, 'TypeSpec.Rest'] : [],
   });
 }
 

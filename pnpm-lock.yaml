@@ -28,6 +28,9 @@ importers:
       '@typespec/protobuf':
         specifier: ~0.63.0
         version: 0.63.0(@typespec/compiler@0.63.0)
+      '@typespec/rest':
+        specifier: ~0.63.0
+        version: 0.63.0(@typespec/compiler@0.63.0)(@typespec/http@0.63.0(@typespec/compiler@0.63.0))
       '@typespec/versioning':
         specifier: ~0.63.0
         version: 0.63.0(@typespec/compiler@0.63.0)
@@ -566,6 +569,13 @@ packages:
     resolution: {integrity: sha512-3Ec3scAjByk+eTcLbqWnSkjpHMUQDsqimAikOOg/N8FQoQM7d2UBw2VIcxtWKA6rTnlbzjv4KM63b5tcaRB9fw==}
     peerDependencies:
       '@typespec/compiler': ~0.63.0
+
+  '@typespec/rest@0.63.0':
+    resolution: {integrity: sha512-HftzMjSDHAYX+ILE9C6pFS4oAq7oBHMCtpA8QgSFPDF4V5a8l1k2K8c4x1B+7yl+GkREmIdtpc6S0xZm2G7hXg==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      '@typespec/compiler': ~0.63.0
+      '@typespec/http': ~0.63.0
 
   '@typespec/versioning@0.63.0':
     resolution: {integrity: sha512-BPvmPL+g20yEmSA8XRfbIHdToNOjssq4QfwOU6D7kKLLXnZHFb1hmuwW0tf0Wa/lYgoaUC60ONAeoXgNT1ZOIQ==}
@@ -1973,6 +1983,11 @@ snapshots:
   '@typespec/protobuf@0.63.0(@typespec/compiler@0.63.0)':
     dependencies:
       '@typespec/compiler': 0.63.0
+
+  '@typespec/rest@0.63.0(@typespec/compiler@0.63.0)(@typespec/http@0.63.0(@typespec/compiler@0.63.0))':
+    dependencies:
+      '@typespec/compiler': 0.63.0
+      '@typespec/http': 0.63.0(@typespec/compiler@0.63.0)
 
   '@typespec/versioning@0.63.0(@typespec/compiler@0.63.0)':
     dependencies:

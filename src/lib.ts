@@ -50,7 +50,7 @@ const EmitterOptionsSchema: JSONSchemaType<ProtobufEmitterOptions> = {
 export const $lib = createTypeSpecLibrary({
   name: '@fox-hound-tools/protobuf-grpc-json-transcoding',
   diagnostics: {},
-  requireImports: ['@typespec/protobuf', '@typespec/http'],
+  requireImports: ['@typespec/protobuf', '@typespec/http', '@typespec/rest'],
   emitter: {
     options: EmitterOptionsSchema,
   },
