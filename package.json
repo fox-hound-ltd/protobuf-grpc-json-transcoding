@@ -1,6 +1,6 @@
 {
   "name": "@fox-hound-tools/protobuf-grpc-json-transcoding",
-  "version": "0.63.1",
+  "version": "0.63.2",
   "author": "Fox Hound Ltd.",
   "description": "TypeSpec library for emitting protobuf, gRPC and JSON transcoding",
   "license": "MIT",
@@ -29,7 +29,7 @@
     }
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=22.0.0"
   },
   "files": [
     "lib/*.tsp",
@@ -43,6 +43,7 @@
     "@typespec/openapi": "~0.63.0",
     "@typespec/openapi3": "~0.63.0",
     "@typespec/protobuf": "~0.63.0",
+    "@typespec/rest": "~0.63.0",
     "@typespec/versioning": "~0.63.0"
   },
   "devDependencies": {
@@ -75,7 +76,7 @@
       "eslint --fix --max-warnings 0 --debug"
     ]
   },
-  "packageManager": "pnpm@9.15.0+sha256.09a8fe31a34fda706354680619f4002f4ccef6dadff93240d24ef6c831f0fd28",
+  "packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf",
   "pnpm": {
     "patchedDependencies": {
       "@typespec/openapi3": "patches/@typespec__openapi3.patch"
