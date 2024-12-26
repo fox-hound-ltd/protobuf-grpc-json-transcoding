@@ -73,7 +73,7 @@ model ResourceCreateOrUpdateRequest<Resource extends {}>
  * @template Resource The resource model to update.
  */
 @doc("{name} update and key parameter model.", Resource)
-@friendlyName("{name}UpdateRequest", Resource)
+@friendlyName("{name}UpdateRequestParameter", Resource)
 @withUpdateableProperties
 model ResourceUpdateParameterRequest<Resource extends {}, RequestResource extends {}> {
   ...ResourceParameters<Resource>;
@@ -97,7 +97,7 @@ model ResourceUpdateRequest<Resource extends {}> is UpdateableProperties<Default
  */
 @doc("{name} update collection operation model.", Resource)
 @friendlyName("{name}UpdateCollectionRequest", Resource)
-@withVisibility(Shared.Lifecycle.Create)
+@withVisibility(Shared.Lifecycle.Update)
 model ResourceUpdateCollectionRequest<Resource extends {}> {
   @doc("The items on update")
   @field(1)
@@ -211,6 +211,26 @@ interface ResourceUpdate<Resource extends {}, RequestResource extends {}> {
 }
 
 /**
+ * Resource updates operation template.
+ *
+ * @template Resource The resource model to update.
+ */
+interface ResourceUpdateMany<Resource extends {}, RequestResource extends {}> {
+  /**
+   * Updates existing instances of the resource.
+   *
+   * @template Resource The resource model to update.
+   */
+  @autoRoute
+  @doc("Updates existing instances of the {name}.", Resource)
+  @patch
+  UpdateMany(
+    ...ResourceCollectionParameters<Resource>,
+    ...ResourceUpdateCollectionRequest<RequestResource>,
+  ): Collection<Resource>;
+}
+
+/**
  * Resource delete operation template.
  *
  * @template Resource The resource model to delete.
@@ -225,6 +245,49 @@ interface ResourceDelete<Resource extends {}> {
   @doc("Deletes an existing instance of the {name}.", Resource)
   @deletesResource(Resource)
   Delete(...ResourceParameters<Resource>): void;
+}
+
+/**
+ * Represents resource delete collection operation model.
+ *
+ * @template Resource The resource model.
+ */
+@doc("{name} delete collection operation model.", Resource)
+@friendlyName("{name}DeleteCollectionRequest", Resource)
+@message
+model ResourceDeleteCollectionRequest<
+  Resource extends {},
+  Type extends numeric | string = numeric,
+  RequestResource extends {} = {}
+> {
+  ...RequestResource;
+
+  @field(999)
+  ids: Type[];
+}
+
+/**
+ * Resource deletes operation template.
+ *
+ * @template Resource The resource model to delete.
+ */
+interface ResourceDeleteMany<
+  Resource extends {},
+  Type extends numeric | string = int32,
+  RequestResource extends {} = {}
+> {
+  /**
+   * Deletes existing instances of the resource.
+   *
+   * @template Resource The resource model to delete.
+   */
+  @autoRoute
+  @doc("Deletes existing instances of the {name}.", Resource)
+  @delete
+  DeleteMany(
+    ...ResourceCollectionParameters<Resource>,
+    ...ResourceDeleteCollectionRequest<Resource, Type, RequestResource>,
+  ): void;
 }
 
 /**
@@ -292,6 +355,26 @@ interface ResourceCreate<Resource extends {}, RequestResource extends {}> {
     ...ResourceCollectionParameters<Resource>,
     ...ResourceCreateRequest<RequestResource>,
   ): ResourceResponse<Resource>;
+}
+
+/**
+ * Resource creates operation template.
+ *
+ * @template Resource The resource model to create.
+ */
+interface ResourceCreateMany<Resource extends {}, RequestResource extends {}> {
+  /**
+   * Creates instances of the resource.
+   *
+   * @template Resource The resource model to create.
+   */
+  @autoRoute
+  @doc("Creates new instances of the {name}.", Resource)
+  @put
+  CreateMany(
+    ...ResourceCollectionParameters<Resource>,
+    ...ResourceCreateCollectionRequest<RequestResource>,
+  ): Collection<Resource>;
 }
 
 /**
