@@ -51,6 +51,16 @@ describe('scenarios', () => {
         );
       });
     });
+    it(`emit resource nested`, async () => {
+      await fileTest('resource/nested', (results) => {
+        expect(results['resource.proto']).toBeDefined();
+        expect(results['resource.proto']).toEqual(
+          fs.readFileSync(__dirname + '/scenarios/resource/nested/expected/resource.proto', {
+            encoding: 'utf-8',
+          }),
+        );
+      });
+    });
   });
 });
 
