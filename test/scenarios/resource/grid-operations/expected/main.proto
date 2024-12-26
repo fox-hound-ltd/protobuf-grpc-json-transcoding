@@ -24,7 +24,7 @@ service Widgets {
     };
   }
   // Updates an existing instance of the Widget.
-  rpc Update(resource.WidgetUpdateRequestParameter) returns (resource.WidgetResponse) {
+  rpc Update(resource.WidgetUpdateRequest) returns (resource.WidgetResponse) {
     option (google.api.http) = {
       patch: "/widgets/{id}"
       body: "*"

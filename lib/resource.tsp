@@ -62,7 +62,7 @@ model ResourceParameters<Resource extends {}> {
  * @template Resource The resource model to create or update.
  */
 @doc("{name} create or update operation model.", Resource)
-@friendlyName("{name}UpdateRequest", Resource)
+@friendlyName("{name}CreateOrUpdateRequest", Resource)
 @withUpdateableProperties
 model ResourceCreateOrUpdateRequest<Resource extends {}>
   is OptionalProperties<UpdateableProperties<DefaultKeyVisibility<Resource, "read">>>;
@@ -73,7 +73,7 @@ model ResourceCreateOrUpdateRequest<Resource extends {}>
  * @template Resource The resource model to update.
  */
 @doc("{name} update and key parameter model.", Resource)
-@friendlyName("{name}UpdateRequestParameter", Resource)
+@friendlyName("{name}UpdateRequest", Resource)
 @withUpdateableProperties
 model ResourceUpdateParameterRequest<Resource extends {}, RequestResource extends {}> {
   ...ResourceParameters<Resource>;
