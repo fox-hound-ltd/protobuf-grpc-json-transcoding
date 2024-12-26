@@ -98,10 +98,10 @@ model ResourceUpdateRequest<Resource extends {}> is UpdateableProperties<Default
 @doc("{name} update collection operation model.", Resource)
 @friendlyName("{name}UpdateCollectionRequest", Resource)
 @withVisibility(Shared.Lifecycle.Update)
-model ResourceUpdateCollectionRequest<Resource extends {}> {
+model ResourceUpdateCollectionRequest<Resource extends {}, RequestResource extends {}> {
   @doc("The items on update")
   @field(1)
-  value: ResourceUpdateParameterRequest<Resource, Resource>[];
+  value: ResourceUpdateParameterRequest<Resource, RequestResource>[];
 }
 
 /**
@@ -226,7 +226,7 @@ interface ResourceUpdateMany<Resource extends {}, RequestResource extends {}> {
   @patch
   UpdateMany(
     ...ResourceCollectionParameters<Resource>,
-    ...ResourceUpdateCollectionRequest<RequestResource>,
+    ...ResourceUpdateCollectionRequest<Resource, RequestResource>,
   ): Collection<Resource>;
 }
 
