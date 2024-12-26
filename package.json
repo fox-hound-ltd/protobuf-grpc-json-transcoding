@@ -1,6 +1,6 @@
 {
   "name": "@fox-hound-tools/protobuf-grpc-json-transcoding",
-  "version": "0.63.4",
+  "version": "0.63.5",
   "author": "Fox Hound Ltd.",
   "description": "TypeSpec library for emitting protobuf, gRPC and JSON transcoding",
   "license": "MIT",
