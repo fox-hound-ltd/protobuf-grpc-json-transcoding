@@ -30,7 +30,7 @@ importers:
         version: 0.63.0(@typespec/compiler@0.63.0)
       '@typespec/rest':
         specifier: ~0.63.0
-        version: 0.63.0(@typespec/compiler@0.63.0)(@typespec/http@0.63.0(@typespec/compiler@0.63.0))
+        version: 0.63.1(@typespec/compiler@0.63.0)(@typespec/http@0.63.0(@typespec/compiler@0.63.0))
       '@typespec/versioning':
         specifier: ~0.63.0
         version: 0.63.0(@typespec/compiler@0.63.0)
@@ -570,8 +570,8 @@ packages:
     peerDependencies:
       '@typespec/compiler': ~0.63.0
 
-  '@typespec/rest@0.63.0':
-    resolution: {integrity: sha512-HftzMjSDHAYX+ILE9C6pFS4oAq7oBHMCtpA8QgSFPDF4V5a8l1k2K8c4x1B+7yl+GkREmIdtpc6S0xZm2G7hXg==}
+  '@typespec/rest@0.63.1':
+    resolution: {integrity: sha512-RQbTM+HGjCaNIWC0v72m5ulnuvLjuRigb7pH4QeRCvFtGPHos+WBv5SImkGrbYx3353OGR8dIi7lWe7aNwiDcQ==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       '@typespec/compiler': ~0.63.0
@@ -1983,7 +1983,7 @@ snapshots:
     dependencies:
       '@typespec/compiler': 0.63.0
 
-  '@typespec/rest@0.63.0(@typespec/compiler@0.63.0)(@typespec/http@0.63.0(@typespec/compiler@0.63.0))':
+  '@typespec/rest@0.63.1(@typespec/compiler@0.63.0)(@typespec/http@0.63.0(@typespec/compiler@0.63.0))':
     dependencies:
       '@typespec/compiler': 0.63.0
       '@typespec/http': 0.63.0(@typespec/compiler@0.63.0)
