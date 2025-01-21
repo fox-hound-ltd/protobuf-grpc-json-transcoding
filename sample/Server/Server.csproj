@@ -10,8 +10,8 @@
   <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.29.3" />
     <PackageReference Include="Grpc.AspNetCore" Version="2.66.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Grpc.JsonTranscoding" Version="8.0.10" />
-    <PackageReference Include="Microsoft.AspNetCore.Grpc.Swagger" Version="0.8.10" />
+    <PackageReference Include="Microsoft.AspNetCore.Grpc.JsonTranscoding" Version="8.0.12" />
+    <PackageReference Include="Microsoft.AspNetCore.Grpc.Swagger" Version="0.8.12" />
     <Protobuf Include="..\Proto\greet.proto" GrpcServices="Server" Link="Protos\greet.proto" />
 
     <PackageReference Include="Grpc.Tools" Version="2.69.0">
