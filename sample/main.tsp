@@ -1,5 +1,6 @@
 import "@typespec/http";
 import "@typespec/protobuf";
+import "@typespec/rest";
 
 using TypeSpec.Http;
 using TypeSpec.Protobuf;
