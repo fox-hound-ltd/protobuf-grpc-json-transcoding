@@ -128,6 +128,12 @@ export function getPath(paths: OpenAPI3Document['paths'], interfaceName: string,
   return result;
 }
 
+function isNotRefableRequestBody(
+  target: OpenAPI3Operation['requestBody'],
+): target is Extract<Required<OpenAPI3Operation['requestBody']>, { content: unknown }> {
+  return Object.hasOwnProperty.call(target, 'content');
+}
+
 /**
  * Get option contents from OpenAPI3Operation.
  */
@@ -140,6 +146,7 @@ export function getOpetionContents(path: string, method: string, operation: Open
     if (
       operation.parameters.length > 0 &&
       operation.requestBody &&
+      isNotRefableRequestBody(operation.requestBody) &&
       operation.requestBody.content &&
       operation.requestBody.content['application/json'] &&
       operation.requestBody.content['application/json'].schema
@@ -168,7 +175,12 @@ export function getOpetionContents(path: string, method: string, operation: Open
   }
   if (method === 'delete') {
     // Add body if required.
-    if (operation.requestBody && operation.requestBody.content && operation.requestBody.content['application/json']) {
+    if (
+      operation.requestBody &&
+      isNotRefableRequestBody(operation.requestBody) &&
+      operation.requestBody.content &&
+      operation.requestBody.content['application/json']
+    ) {
       return indent(`delete: "${path}"`) + indent(`body: "*"`);
     }
     return indent(`delete: "${path}"`);
