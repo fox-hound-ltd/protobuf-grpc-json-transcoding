@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   '@typespec/openapi3':
-    hash: mbwuzk7cgukr4aqout2qfqtfja
+    hash: 6e99b00865c61c90863d98d804ddf362ede69fb8ef9c20c25059ec2ad63fd721
     path: patches/@typespec__openapi3.patch
 
 importers:
@@ -24,7 +24,7 @@ importers:
         version: 0.65.0(@typespec/compiler@0.65.2)(@typespec/http@0.65.0(@typespec/compiler@0.65.2))
       '@typespec/openapi3':
         specifier: ~0.65.0
-        version: 0.65.0(patch_hash=mbwuzk7cgukr4aqout2qfqtfja)(@typespec/compiler@0.65.2)(@typespec/http@0.65.0(@typespec/compiler@0.65.2))(@typespec/openapi@0.65.0(@typespec/compiler@0.65.2)(@typespec/http@0.65.0(@typespec/compiler@0.65.2)))(@typespec/versioning@0.65.0(@typespec/compiler@0.65.2))
+        version: 0.65.0(patch_hash=6e99b00865c61c90863d98d804ddf362ede69fb8ef9c20c25059ec2ad63fd721)(@typespec/compiler@0.65.2)(@typespec/http@0.65.0(@typespec/compiler@0.65.2))(@typespec/openapi@0.65.0(@typespec/compiler@0.65.2)(@typespec/http@0.65.0(@typespec/compiler@0.65.2)))(@typespec/versioning@0.65.0(@typespec/compiler@0.65.2))
       '@typespec/protobuf':
         specifier: ~0.65.0
         version: 0.65.0(@typespec/compiler@0.65.2)
@@ -2606,7 +2606,7 @@ snapshots:
     dependencies:
       '@typespec/compiler': 0.65.2
 
-  '@typespec/openapi3@0.65.0(patch_hash=mbwuzk7cgukr4aqout2qfqtfja)(@typespec/compiler@0.65.2)(@typespec/http@0.65.0(@typespec/compiler@0.65.2))(@typespec/openapi@0.65.0(@typespec/compiler@0.65.2)(@typespec/http@0.65.0(@typespec/compiler@0.65.2)))(@typespec/versioning@0.65.0(@typespec/compiler@0.65.2))':
+  '@typespec/openapi3@0.65.0(patch_hash=6e99b00865c61c90863d98d804ddf362ede69fb8ef9c20c25059ec2ad63fd721)(@typespec/compiler@0.65.2)(@typespec/http@0.65.0(@typespec/compiler@0.65.2))(@typespec/openapi@0.65.0(@typespec/compiler@0.65.2)(@typespec/http@0.65.0(@typespec/compiler@0.65.2)))(@typespec/versioning@0.65.0(@typespec/compiler@0.65.2))':
     dependencies:
       '@apidevtools/swagger-parser': 10.1.1(openapi-types@12.1.3)
       '@typespec/compiler': 0.65.2
