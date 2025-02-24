@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   '@typespec/openapi3':
-    hash: 6e99b00865c61c90863d98d804ddf362ede69fb8ef9c20c25059ec2ad63fd721
+    hash: mbwuzk7cgukr4aqout2qfqtfja
     path: patches/@typespec__openapi3.patch
 
 importers:
@@ -15,35 +15,35 @@ importers:
     dependencies:
       '@typespec/compiler':
         specifier: ~0.65.2
-        version: 0.65.2
+        version: 0.65.3
       '@typespec/http':
         specifier: ~0.65.0
-        version: 0.65.0(@typespec/compiler@0.65.2)
+        version: 0.65.0(@typespec/compiler@0.65.3)
       '@typespec/openapi':
         specifier: ~0.65.0
-        version: 0.65.0(@typespec/compiler@0.65.2)(@typespec/http@0.65.0(@typespec/compiler@0.65.2))
+        version: 0.65.0(@typespec/compiler@0.65.3)(@typespec/http@0.65.0(@typespec/compiler@0.65.3))
       '@typespec/openapi3':
         specifier: ~0.65.0
-        version: 0.65.0(patch_hash=6e99b00865c61c90863d98d804ddf362ede69fb8ef9c20c25059ec2ad63fd721)(@typespec/compiler@0.65.2)(@typespec/http@0.65.0(@typespec/compiler@0.65.2))(@typespec/openapi@0.65.0(@typespec/compiler@0.65.2)(@typespec/http@0.65.0(@typespec/compiler@0.65.2)))(@typespec/versioning@0.65.0(@typespec/compiler@0.65.2))
+        version: 0.65.0(patch_hash=mbwuzk7cgukr4aqout2qfqtfja)(@typespec/compiler@0.65.3)(@typespec/http@0.65.0(@typespec/compiler@0.65.3))(@typespec/openapi@0.65.0(@typespec/compiler@0.65.3)(@typespec/http@0.65.0(@typespec/compiler@0.65.3)))(@typespec/versioning@0.65.0(@typespec/compiler@0.65.3))
       '@typespec/protobuf':
         specifier: ~0.65.0
-        version: 0.65.0(@typespec/compiler@0.65.2)
+        version: 0.65.0(@typespec/compiler@0.65.3)
       '@typespec/rest':
         specifier: ~0.65.0
-        version: 0.65.0(@typespec/compiler@0.65.2)(@typespec/http@0.65.0(@typespec/compiler@0.65.2))
+        version: 0.65.0(@typespec/compiler@0.65.3)(@typespec/http@0.65.0(@typespec/compiler@0.65.3))
       '@typespec/versioning':
         specifier: ~0.65.0
-        version: 0.65.0(@typespec/compiler@0.65.2)
+        version: 0.65.0(@typespec/compiler@0.65.3)
     devDependencies:
       '@trivago/prettier-plugin-sort-imports':
         specifier: ^5.2.2
         version: 5.2.2(prettier@3.5.1)
       '@types/node':
         specifier: latest
-        version: 22.13.0
+        version: 22.13.5
       '@typespec/prettier-plugin-typespec':
         specifier: latest
-        version: 0.64.0
+        version: 0.65.0
       eslint:
         specifier: ^9.20.1
         version: 9.20.1
@@ -67,7 +67,7 @@ importers:
         version: 8.24.0(eslint@9.20.1)(typescript@5.6.3)
       vitest:
         specifier: ^3.0.5
-        version: 3.0.5(@types/node@22.13.0)(yaml@2.7.0)
+        version: 3.0.5(@types/node@22.13.5)(yaml@2.7.0)
 
 packages:
 
@@ -385,8 +385,8 @@ packages:
     resolution: {integrity: sha512-/xGlezI6xfGO9NwuJlnwz/K14qD1kCSAGtacBHnGzeAIuJGazcp45KP5NuyARXoKb7cwulAGWVsbeSxdG/cb0Q==}
     engines: {node: ^18.17.0 || >=20.5.0}
 
-  '@npmcli/git@6.0.1':
-    resolution: {integrity: sha512-BBWMMxeQzalmKadyimwb2/VVQyJB01PH0HhVSNLHNBDZN/M/h/02P6f8fxedIiFhpMj11SO9Ep5tKTBE7zL2nw==}
+  '@npmcli/git@6.0.3':
+    resolution: {integrity: sha512-GUYESQlxZRAdhs3UhbB6pVRNUELQOHXwK9ruDkwmCv2aZ5y0SApQzUJCg02p3A7Ue2J5hxvlk1YI53c00NmRyQ==}
     engines: {node: ^18.17.0 || >=20.5.0}
 
   '@npmcli/installed-package-contents@3.0.0':
@@ -587,8 +587,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@22.13.0':
-    resolution: {integrity: sha512-ClIbNe36lawluuvq3+YYhnIN2CELi+6q8NpnM7PYp4hBn/TatfboPgVSm2rwKRfnV2M+Ty9GWDFI64KEe+kysA==}
+  '@types/node@22.13.5':
+    resolution: {integrity: sha512-+lTU0PxZXn0Dr1NBtC7Y8cR21AJr87dLLU953CWA6pMxxv/UDc7jYAY90upcrie1nRcD6XNG5HOYEDtgW5TxAg==}
 
   '@typescript-eslint/eslint-plugin@8.24.0':
     resolution: {integrity: sha512-aFcXEJJCI4gUdXgoo/j9udUYIHgF23MFkg09LFz2dzEmU0+1Plk4rQWv/IYKvPHAtlkkGoB3m5e6oUp+JPsNaQ==}
@@ -637,8 +637,8 @@ packages:
     resolution: {integrity: sha512-kArLq83QxGLbuHrTMoOEWO+l2MwsNS2TGISEdx8xgqpkbytB07XmlQyQdNDrCc1ecSqx0cnmhGvpX+VBwqqSkg==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@typespec/compiler@0.65.2':
-    resolution: {integrity: sha512-7qXegZj1VBfOsXzLHTTaVwaOOLTQ2u63d4SqA8RHukSbPwzIZFezd8P7my8SYuL+/onncKHCBLRwsaedFRlLGg==}
+  '@typespec/compiler@0.65.3':
+    resolution: {integrity: sha512-hPiTMyXYe1ips8o/1OcrzKkdrwFt3NinrD70AldhR6cPNz9O9y9r+TdE62c3VpPNknuamNVJn1jTkOWVhUczxA==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -676,8 +676,8 @@ packages:
       '@typespec/compiler': ~0.65.0
       '@typespec/http': ~0.65.0
 
-  '@typespec/prettier-plugin-typespec@0.64.0':
-    resolution: {integrity: sha512-hL/DOo7+PFp/HGeZgkKqkbG9Q4iUYbhvqHcwXhzCOIaBFn50fgNQbBRdQD9VgvrGGbwN7fyTJmsGWyFnuSNjJA==}
+  '@typespec/prettier-plugin-typespec@0.65.0':
+    resolution: {integrity: sha512-xk8RHulJiEEg61TEU2Bvwnq8V1C+2pilod1QvTtp23rFB4PqPPrX3f4MXwvVk+pI1M7Eqi1Ga759o8J4R9t6vg==}
 
   '@typespec/protobuf@0.65.0':
     resolution: {integrity: sha512-bO2bI4dF1udrvMgkbF/3b5ITiCieI4guFyCpwpAEkgo8kz//MYkfog3RsfmayfJH/TOeiUvqrBNdh2mT8wibPg==}
@@ -939,8 +939,8 @@ packages:
     engines: {node: '>=18'}
     hasBin: true
 
-  escalade@3.1.2:
-    resolution: {integrity: sha512-ErCHMCae19vR8vQGe50xIsVomy19rg6gFu3+r3jkEO46suLMWBksvVyoGgQV+jOfl84ZSOSlmv6Gxa89PmTGmA==}
+  escalade@3.2.0:
+    resolution: {integrity: sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA==}
     engines: {node: '>=6'}
 
   escape-string-regexp@4.0.0:
@@ -1019,11 +1019,11 @@ packages:
   fast-levenshtein@2.0.6:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==}
 
-  fast-uri@3.0.1:
-    resolution: {integrity: sha512-MWipKbbYiYI0UC7cl8m/i/IWTqfC8YXsqjzybjddLsFjStroQzsHXkc73JutMvBiXmOvapk+axIl79ig5t55Bw==}
+  fast-uri@3.0.6:
+    resolution: {integrity: sha512-Atfo14OibSv5wAp4VWNsFYE1AchQRTv9cBGWET4pZWHzYshFSS9NQI6I57rdKn9croWVMbYFbLhJ+yJvmZIIHw==}
 
-  fastq@1.17.1:
-    resolution: {integrity: sha512-sRVD3lWVIXWg6By68ZN7vho9a1pQcN/WBFaAAsDDFzlJjvoGx0P8z7V1t72grFJfJhu3YPZBuu25f7Kaw2jN1w==}
+  fastq@1.19.0:
+    resolution: {integrity: sha512-7SFSRCNjBQIZH/xZR3iy5iQYR8aGBE0h3VG6/cwlbrpdciNYBMotQav8c1XI3HjHH+NikUpP53nPdlZSdWmFzA==}
 
   file-entry-cache@8.0.0:
     resolution: {integrity: sha512-XXTUwCvisa5oacNGRP9SfNtYBNAMi+RPwBFmblZEF7N7swHYQS6/Zfk7SRwx4D5j3CH211YNRco1DEMNVfZCnQ==}
@@ -1535,11 +1535,6 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier@3.3.3:
-    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
-    engines: {node: '>=14'}
-    hasBin: true
-
   prettier@3.4.2:
     resolution: {integrity: sha512-e9MewbtFo+Fevyuxn/4rrcDAaq0IYxPGLvObpQjiZBMAzB9IGmzlnG9RZy3FFas+eBMu2vA0CszMeduow5dIuQ==}
     engines: {node: '>=14'}
@@ -1563,14 +1558,6 @@ packages:
 
   promise-call-limit@3.0.2:
     resolution: {integrity: sha512-mRPQO2T1QQVw11E7+UdCJu7S61eJVWknzml9sC1heAdj1jxl0fWMBypIt9ZOcLFf8FkG995ZD7RnVk7HH72fZw==}
-
-  promise-inflight@1.0.1:
-    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==}
-    peerDependencies:
-      bluebird: '*'
-    peerDependenciesMeta:
-      bluebird:
-        optional: true
 
   promise-retry@2.0.1:
     resolution: {integrity: sha512-y+WKFlBR8BGXnsNlIHFGPZmyDf3DFMoLhaflAnyZgV6rG6xu+JwesTo2Q9R6XwYmtmwAFCkAk3e35jEdoeh/3g==}
@@ -1637,8 +1624,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  semver@7.7.0:
-    resolution: {integrity: sha512-DrfFnPzblFmNrIZzg5RzHegbiRWg7KMR7btwi2yjHwx06zsUbO5g613sVwEV7FTwmzJu+Io0lJe2GJ3LxqpvBQ==}
+  semver@7.7.1:
+    resolution: {integrity: sha512-hlq8tAfn0m/61p4BVRcPzIGr6LKiMwo4VM6dGi6pt4qcRkmNzTcWq6eCEjEh+qXjkMDvPlOFFSGwQjoEa6gyMA==}
     engines: {node: '>=10'}
     hasBin: true
 
@@ -2249,7 +2236,7 @@ snapshots:
   '@nodelib/fs.walk@1.2.8':
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
-      fastq: 1.17.1
+      fastq: 1.19.0
 
   '@npmcli/agent@3.0.0':
     dependencies:
@@ -2294,31 +2281,27 @@ snapshots:
       promise-all-reject-late: 1.0.1
       promise-call-limit: 3.0.2
       read-package-json-fast: 4.0.0
-      semver: 7.7.0
+      semver: 7.7.1
       ssri: 12.0.0
       treeverse: 3.0.0
       walk-up-path: 3.0.1
     transitivePeerDependencies:
-      - bluebird
       - supports-color
 
   '@npmcli/fs@4.0.0':
     dependencies:
-      semver: 7.7.0
+      semver: 7.7.1
 
-  '@npmcli/git@6.0.1':
+  '@npmcli/git@6.0.3':
     dependencies:
       '@npmcli/promise-spawn': 8.0.2
       ini: 5.0.0
       lru-cache: 10.4.3
       npm-pick-manifest: 10.0.0
       proc-log: 5.0.0
-      promise-inflight: 1.0.1
       promise-retry: 2.0.1
-      semver: 7.7.0
+      semver: 7.7.1
       which: 5.0.0
-    transitivePeerDependencies:
-      - bluebird
 
   '@npmcli/installed-package-contents@3.0.0':
     dependencies:
@@ -2331,8 +2314,6 @@ snapshots:
       '@npmcli/package-json': 6.1.1
       glob: 10.4.5
       minimatch: 9.0.5
-    transitivePeerDependencies:
-      - bluebird
 
   '@npmcli/metavuln-calculator@8.0.1':
     dependencies:
@@ -2340,9 +2321,8 @@ snapshots:
       json-parse-even-better-errors: 4.0.0
       pacote: 20.0.0
       proc-log: 5.0.0
-      semver: 7.7.0
+      semver: 7.7.1
     transitivePeerDependencies:
-      - bluebird
       - supports-color
 
   '@npmcli/name-from-folder@3.0.0': {}
@@ -2351,15 +2331,13 @@ snapshots:
 
   '@npmcli/package-json@6.1.1':
     dependencies:
-      '@npmcli/git': 6.0.1
+      '@npmcli/git': 6.0.3
       glob: 10.4.5
       hosted-git-info: 8.0.2
       json-parse-even-better-errors: 4.0.0
       proc-log: 5.0.0
-      semver: 7.7.0
+      semver: 7.7.1
       validate-npm-package-license: 3.0.4
-    transitivePeerDependencies:
-      - bluebird
 
   '@npmcli/promise-spawn@8.0.2':
     dependencies:
@@ -2380,7 +2358,6 @@ snapshots:
       proc-log: 5.0.0
       which: 5.0.0
     transitivePeerDependencies:
-      - bluebird
       - supports-color
 
   '@pkgjs/parseargs@0.11.0':
@@ -2500,7 +2477,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@22.13.0':
+  '@types/node@22.13.5':
     dependencies:
       undici-types: 6.20.0
 
@@ -2559,7 +2536,7 @@ snapshots:
       fast-glob: 3.3.3
       is-glob: 4.0.3
       minimatch: 9.0.5
-      semver: 7.7.0
+      semver: 7.7.1
       ts-api-utils: 2.0.1(typescript@5.6.3)
       typescript: 5.6.3
     transitivePeerDependencies:
@@ -2581,7 +2558,7 @@ snapshots:
       '@typescript-eslint/types': 8.24.0
       eslint-visitor-keys: 4.2.0
 
-  '@typespec/compiler@0.65.2':
+  '@typespec/compiler@0.65.3':
     dependencies:
       '@babel/code-frame': 7.26.2
       '@npmcli/arborist': 8.0.0
@@ -2592,51 +2569,50 @@ snapshots:
       picocolors: 1.1.1
       prettier: 3.4.2
       prompts: 2.4.2
-      semver: 7.7.0
+      semver: 7.7.1
       temporal-polyfill: 0.2.5
       vscode-languageserver: 9.0.1
       vscode-languageserver-textdocument: 1.0.12
       yaml: 2.7.0
       yargs: 17.7.2
     transitivePeerDependencies:
-      - bluebird
       - supports-color
 
-  '@typespec/http@0.65.0(@typespec/compiler@0.65.2)':
+  '@typespec/http@0.65.0(@typespec/compiler@0.65.3)':
     dependencies:
-      '@typespec/compiler': 0.65.2
+      '@typespec/compiler': 0.65.3
 
-  '@typespec/openapi3@0.65.0(patch_hash=6e99b00865c61c90863d98d804ddf362ede69fb8ef9c20c25059ec2ad63fd721)(@typespec/compiler@0.65.2)(@typespec/http@0.65.0(@typespec/compiler@0.65.2))(@typespec/openapi@0.65.0(@typespec/compiler@0.65.2)(@typespec/http@0.65.0(@typespec/compiler@0.65.2)))(@typespec/versioning@0.65.0(@typespec/compiler@0.65.2))':
+  '@typespec/openapi3@0.65.0(patch_hash=mbwuzk7cgukr4aqout2qfqtfja)(@typespec/compiler@0.65.3)(@typespec/http@0.65.0(@typespec/compiler@0.65.3))(@typespec/openapi@0.65.0(@typespec/compiler@0.65.3)(@typespec/http@0.65.0(@typespec/compiler@0.65.3)))(@typespec/versioning@0.65.0(@typespec/compiler@0.65.3))':
     dependencies:
       '@apidevtools/swagger-parser': 10.1.1(openapi-types@12.1.3)
-      '@typespec/compiler': 0.65.2
-      '@typespec/http': 0.65.0(@typespec/compiler@0.65.2)
-      '@typespec/openapi': 0.65.0(@typespec/compiler@0.65.2)(@typespec/http@0.65.0(@typespec/compiler@0.65.2))
-      '@typespec/versioning': 0.65.0(@typespec/compiler@0.65.2)
+      '@typespec/compiler': 0.65.3
+      '@typespec/http': 0.65.0(@typespec/compiler@0.65.3)
+      '@typespec/openapi': 0.65.0(@typespec/compiler@0.65.3)(@typespec/http@0.65.0(@typespec/compiler@0.65.3))
+      '@typespec/versioning': 0.65.0(@typespec/compiler@0.65.3)
       openapi-types: 12.1.3
       yaml: 2.7.0
 
-  '@typespec/openapi@0.65.0(@typespec/compiler@0.65.2)(@typespec/http@0.65.0(@typespec/compiler@0.65.2))':
+  '@typespec/openapi@0.65.0(@typespec/compiler@0.65.3)(@typespec/http@0.65.0(@typespec/compiler@0.65.3))':
     dependencies:
-      '@typespec/compiler': 0.65.2
-      '@typespec/http': 0.65.0(@typespec/compiler@0.65.2)
+      '@typespec/compiler': 0.65.3
+      '@typespec/http': 0.65.0(@typespec/compiler@0.65.3)
 
-  '@typespec/prettier-plugin-typespec@0.64.0':
+  '@typespec/prettier-plugin-typespec@0.65.0':
     dependencies:
-      prettier: 3.3.3
+      prettier: 3.4.2
 
-  '@typespec/protobuf@0.65.0(@typespec/compiler@0.65.2)':
+  '@typespec/protobuf@0.65.0(@typespec/compiler@0.65.3)':
     dependencies:
-      '@typespec/compiler': 0.65.2
+      '@typespec/compiler': 0.65.3
 
-  '@typespec/rest@0.65.0(@typespec/compiler@0.65.2)(@typespec/http@0.65.0(@typespec/compiler@0.65.2))':
+  '@typespec/rest@0.65.0(@typespec/compiler@0.65.3)(@typespec/http@0.65.0(@typespec/compiler@0.65.3))':
     dependencies:
-      '@typespec/compiler': 0.65.2
-      '@typespec/http': 0.65.0(@typespec/compiler@0.65.2)
+      '@typespec/compiler': 0.65.3
+      '@typespec/http': 0.65.0(@typespec/compiler@0.65.3)
 
-  '@typespec/versioning@0.65.0(@typespec/compiler@0.65.2)':
+  '@typespec/versioning@0.65.0(@typespec/compiler@0.65.3)':
     dependencies:
-      '@typespec/compiler': 0.65.2
+      '@typespec/compiler': 0.65.3
 
   '@vitest/expect@3.0.5':
     dependencies:
@@ -2645,13 +2621,13 @@ snapshots:
       chai: 5.1.2
       tinyrainbow: 2.0.0
 
-  '@vitest/mocker@3.0.5(vite@6.0.11(@types/node@22.13.0)(yaml@2.7.0))':
+  '@vitest/mocker@3.0.5(vite@6.0.11(@types/node@22.13.5)(yaml@2.7.0))':
     dependencies:
       '@vitest/spy': 3.0.5
       estree-walker: 3.0.3
       magic-string: 0.30.17
     optionalDependencies:
-      vite: 6.0.11(@types/node@22.13.0)(yaml@2.7.0)
+      vite: 6.0.11(@types/node@22.13.5)(yaml@2.7.0)
 
   '@vitest/pretty-format@3.0.5':
     dependencies:
@@ -2702,7 +2678,7 @@ snapshots:
   ajv@8.17.1:
     dependencies:
       fast-deep-equal: 3.1.3
-      fast-uri: 3.0.1
+      fast-uri: 3.0.6
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
 
@@ -2887,7 +2863,7 @@ snapshots:
       '@esbuild/win32-ia32': 0.24.2
       '@esbuild/win32-x64': 0.24.2
 
-  escalade@3.1.2: {}
+  escalade@3.2.0: {}
 
   escape-string-regexp@4.0.0: {}
 
@@ -2993,9 +2969,9 @@ snapshots:
 
   fast-levenshtein@2.0.6: {}
 
-  fast-uri@3.0.1: {}
+  fast-uri@3.0.6: {}
 
-  fastq@1.17.1:
+  fastq@1.19.0:
     dependencies:
       reusify: 1.0.4
 
@@ -3349,7 +3325,7 @@ snapshots:
       make-fetch-happen: 14.0.3
       nopt: 8.1.0
       proc-log: 5.0.0
-      semver: 7.7.0
+      semver: 7.7.1
       tar: 7.4.3
       which: 5.0.0
     transitivePeerDependencies:
@@ -3365,7 +3341,7 @@ snapshots:
 
   npm-install-checks@7.1.1:
     dependencies:
-      semver: 7.7.0
+      semver: 7.7.1
 
   npm-normalize-package-bin@4.0.0: {}
 
@@ -3373,7 +3349,7 @@ snapshots:
     dependencies:
       hosted-git-info: 8.0.2
       proc-log: 5.0.0
-      semver: 7.7.0
+      semver: 7.7.1
       validate-npm-package-name: 6.0.0
 
   npm-packlist@9.0.0:
@@ -3385,7 +3361,7 @@ snapshots:
       npm-install-checks: 7.1.1
       npm-normalize-package-bin: 4.0.0
       npm-package-arg: 12.0.2
-      semver: 7.7.0
+      semver: 7.7.1
 
   npm-registry-fetch@18.0.2:
     dependencies:
@@ -3437,7 +3413,7 @@ snapshots:
 
   pacote@19.0.1:
     dependencies:
-      '@npmcli/git': 6.0.1
+      '@npmcli/git': 6.0.3
       '@npmcli/installed-package-contents': 3.0.0
       '@npmcli/package-json': 6.1.1
       '@npmcli/promise-spawn': 8.0.2
@@ -3455,12 +3431,11 @@ snapshots:
       ssri: 12.0.0
       tar: 6.2.1
     transitivePeerDependencies:
-      - bluebird
       - supports-color
 
   pacote@20.0.0:
     dependencies:
-      '@npmcli/git': 6.0.1
+      '@npmcli/git': 6.0.3
       '@npmcli/installed-package-contents': 3.0.0
       '@npmcli/package-json': 6.1.1
       '@npmcli/promise-spawn': 8.0.2
@@ -3478,7 +3453,6 @@ snapshots:
       ssri: 12.0.0
       tar: 6.2.1
     transitivePeerDependencies:
-      - bluebird
       - supports-color
 
   parent-module@1.0.1:
@@ -3527,8 +3501,6 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier@3.3.3: {}
-
   prettier@3.4.2: {}
 
   prettier@3.5.1: {}
@@ -3540,8 +3512,6 @@ snapshots:
   promise-all-reject-late@1.0.1: {}
 
   promise-call-limit@3.0.2: {}
-
-  promise-inflight@1.0.1: {}
 
   promise-retry@2.0.1:
     dependencies:
@@ -3617,7 +3587,7 @@ snapshots:
   safer-buffer@2.1.2:
     optional: true
 
-  semver@7.7.0: {}
+  semver@7.7.1: {}
 
   shebang-command@2.0.0:
     dependencies:
@@ -3824,13 +3794,13 @@ snapshots:
 
   validate-npm-package-name@6.0.0: {}
 
-  vite-node@3.0.5(@types/node@22.13.0)(yaml@2.7.0):
+  vite-node@3.0.5(@types/node@22.13.5)(yaml@2.7.0):
     dependencies:
       cac: 6.7.14
       debug: 4.4.0
       es-module-lexer: 1.6.0
       pathe: 2.0.2
-      vite: 6.0.11(@types/node@22.13.0)(yaml@2.7.0)
+      vite: 6.0.11(@types/node@22.13.5)(yaml@2.7.0)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -3845,20 +3815,20 @@ snapshots:
       - tsx
       - yaml
 
-  vite@6.0.11(@types/node@22.13.0)(yaml@2.7.0):
+  vite@6.0.11(@types/node@22.13.5)(yaml@2.7.0):
     dependencies:
       esbuild: 0.24.2
       postcss: 8.5.1
       rollup: 4.32.0
     optionalDependencies:
-      '@types/node': 22.13.0
+      '@types/node': 22.13.5
       fsevents: 2.3.3
       yaml: 2.7.0
 
-  vitest@3.0.5(@types/node@22.13.0)(yaml@2.7.0):
+  vitest@3.0.5(@types/node@22.13.5)(yaml@2.7.0):
     dependencies:
       '@vitest/expect': 3.0.5
-      '@vitest/mocker': 3.0.5(vite@6.0.11(@types/node@22.13.0)(yaml@2.7.0))
+      '@vitest/mocker': 3.0.5(vite@6.0.11(@types/node@22.13.5)(yaml@2.7.0))
       '@vitest/pretty-format': 3.0.5
       '@vitest/runner': 3.0.5
       '@vitest/snapshot': 3.0.5
@@ -3874,11 +3844,11 @@ snapshots:
       tinyexec: 0.3.2
       tinypool: 1.0.2
       tinyrainbow: 2.0.0
-      vite: 6.0.11(@types/node@22.13.0)(yaml@2.7.0)
-      vite-node: 3.0.5(@types/node@22.13.0)(yaml@2.7.0)
+      vite: 6.0.11(@types/node@22.13.5)(yaml@2.7.0)
+      vite-node: 3.0.5(@types/node@22.13.5)(yaml@2.7.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 22.13.0
+      '@types/node': 22.13.5
     transitivePeerDependencies:
       - jiti
       - less
@@ -3961,7 +3931,7 @@ snapshots:
   yargs@17.7.2:
     dependencies:
       cliui: 8.0.1
-      escalade: 3.1.2
+      escalade: 3.2.0
       get-caller-file: 2.0.5
       require-directory: 2.1.1
       string-width: 4.2.3
