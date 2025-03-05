@@ -1,6 +1,6 @@
 {
   "name": "@fox-hound-tools/protobuf-grpc-json-transcoding",
-  "version": "0.65.0",
+  "version": "0.66.0",
   "author": "Fox Hound Ltd.",
   "description": "TypeSpec library for emitting protobuf, gRPC and JSON transcoding",
   "license": "MIT",
@@ -38,13 +38,13 @@
     "!dist/test/**"
   ],
   "dependencies": {
-    "@typespec/compiler": "~0.65.3",
-    "@typespec/http": "~0.65.0",
-    "@typespec/openapi": "~0.65.0",
-    "@typespec/openapi3": "~0.65.0",
-    "@typespec/protobuf": "~0.65.0",
-    "@typespec/rest": "~0.65.0",
-    "@typespec/versioning": "~0.65.0"
+    "@typespec/compiler": "~0.66.0",
+    "@typespec/http": "~0.66.0",
+    "@typespec/openapi": "~0.66.0",
+    "@typespec/openapi3": "~0.66.0",
+    "@typespec/protobuf": "~0.66.0",
+    "@typespec/rest": "~0.66.0",
+    "@typespec/versioning": "~0.66.0"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
@@ -54,10 +54,10 @@
     "globals": "^16.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
-    "prettier": "^3.5.2",
+    "prettier": "^3.5.3",
     "typescript": "~5.6.3",
-    "typescript-eslint": "^8.24.1",
-    "vitest": "^3.0.6"
+    "typescript-eslint": "^8.26.0",
+    "vitest": "^3.0.7"
   },
   "scripts": {
     "build": "tsc",

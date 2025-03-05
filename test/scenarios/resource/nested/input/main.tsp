@@ -3,9 +3,7 @@ import "@typespec/protobuf";
 import "@fox-hound-tools/protobuf-grpc-json-transcoding";
 using TypeSpec.Http;
 using TypeSpec.Protobuf;
-@TypeSpec.service({
-  title: "Widget Service",
-})
+@TypeSpec.service(#{ title: "Widget Service" })
 @package({
   name: "main",
 })
@@ -18,7 +16,7 @@ model Widget<TItem extends {}> {
   @field(1)
   id: int32;
 
-  @visibility(Shared.Lifecycle.Create, Shared.Lifecycle.Update)
+  @visibility(Lifecycle.Create, Lifecycle.Update)
   @field(2)
   weight: int32;
 

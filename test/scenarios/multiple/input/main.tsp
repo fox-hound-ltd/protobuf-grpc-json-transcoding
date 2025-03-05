@@ -3,9 +3,7 @@ import "@typespec/protobuf";
 
 using TypeSpec.Http;
 using TypeSpec.Protobuf;
-@TypeSpec.service({
-  title: "Main",
-})
+@TypeSpec.service(#{ title: "Main" })
 @package({
   name: "main",
 })

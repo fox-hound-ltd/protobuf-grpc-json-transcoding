@@ -3,16 +3,14 @@ import "@typespec/protobuf";
 
 using TypeSpec.Http;
 using TypeSpec.Protobuf;
-@TypeSpec.service({
-  title: "Widget Service",
-})
+@TypeSpec.service(#{ title: "Widget Service" })
 @package({
   name: "widget",
 })
 namespace DemoService;
 
 model Widget {
-  @visibility("read", "update")
+  @visibility(Lifecycle.Read, Lifecycle.Update)
   @path
   @field(1)
   id: string;

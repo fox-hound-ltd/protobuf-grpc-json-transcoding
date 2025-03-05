@@ -1,7 +1,6 @@
 import "@typespec/protobuf";
 import "@typespec/http";
 import "@typespec/rest";
-import "./shread.tsp";
 using TypeSpec.Protobuf;
 using TypeSpec.Http;
 using TypeSpec.Rest;
@@ -65,7 +64,7 @@ model ResourceParameters<Resource extends {}> {
 @friendlyName("{name}CreateOrUpdateRequest", Resource)
 @withUpdateableProperties
 model ResourceCreateOrUpdateRequest<Resource extends {}>
-  is OptionalProperties<UpdateableProperties<DefaultKeyVisibility<Resource, "read">>>;
+  is OptionalProperties<UpdateableProperties<DefaultKeyVisibility<Resource, Lifecycle.Read>>>;
 
 /**
  * Represents Resource update and key parameter model.
@@ -88,7 +87,8 @@ model ResourceUpdateParameterRequest<Resource extends {}, RequestResource extend
 @doc("{name} update operation model.", Resource)
 @friendlyName("{name}UpdateRequest", Resource)
 @withUpdateableProperties
-model ResourceUpdateRequest<Resource extends {}> is UpdateableProperties<DefaultKeyVisibility<Resource, "read">>;
+model ResourceUpdateRequest<Resource extends {}>
+  is UpdateableProperties<DefaultKeyVisibility<Resource, Lifecycle.Read>>;
 
 /**
  * Represents resource update collection operation model.
@@ -97,7 +97,7 @@ model ResourceUpdateRequest<Resource extends {}> is UpdateableProperties<Default
  */
 @doc("{name} update collection operation model.", Resource)
 @friendlyName("{name}UpdateCollectionRequest", Resource)
-@withVisibility(Shared.Lifecycle.Update)
+@withVisibility(Lifecycle.Update)
 model ResourceUpdateCollectionRequest<Resource extends {}, RequestResource extends {}> {
   @doc("The items on update")
   @field(1)
@@ -108,7 +108,7 @@ model ResourceUpdateCollectionRequest<Resource extends {}, RequestResource exten
  * Represents operation response for the resource of type `Resource`.
  */
 @doc("{name} operation response for resource Resource.", Resource)
-@withVisibility(Shared.Lifecycle.Read)
+@withVisibility(Lifecycle.Read)
 @friendlyName("{name}Response", Resource)
 model ResourceResponse<Resource extends {}> {
   ...Resource;
@@ -134,8 +134,8 @@ model Collection<Resource extends {}> {
  */
 @doc("{name} create operation model.", Resource)
 @friendlyName("{name}CreateRequest", Resource)
-@withVisibility(Shared.Lifecycle.Create)
-model ResourceCreateRequest<Resource extends {}> is DefaultKeyVisibility<Resource, "read">;
+@withVisibility(Lifecycle.Create)
+model ResourceCreateRequest<Resource extends {}> is DefaultKeyVisibility<Resource, Lifecycle.Read>;
 
 /**
  * Represents resource create collection operation model.
@@ -144,7 +144,7 @@ model ResourceCreateRequest<Resource extends {}> is DefaultKeyVisibility<Resourc
  */
 @doc("{name} create collection operation model.", Resource)
 @friendlyName("{name}CreateCollectionRequest", Resource)
-@withVisibility(Shared.Lifecycle.Create)
+@withVisibility(Lifecycle.Create)
 model ResourceCreateCollectionRequest<Resource extends {}> {
   @doc("The items on create")
   @field(1)
@@ -158,8 +158,8 @@ model ResourceCreateCollectionRequest<Resource extends {}> {
  */
 @doc("{name} list search operation query model.", Resource)
 @friendlyName("{name}ListSearchRequest", Resource)
-@withVisibility(Shared.Lifecycle.Query)
-model ResourceListSearchRequest<Resource extends {}> is DefaultKeyVisibility<Resource, "read">;
+@withVisibility(Lifecycle.Query)
+model ResourceListSearchRequest<Resource extends {}> is DefaultKeyVisibility<Resource, Lifecycle.Read>;
 
 /**
  * Represents resource list search operation query model.
@@ -168,7 +168,7 @@ model ResourceListSearchRequest<Resource extends {}> is DefaultKeyVisibility<Res
  */
 @doc("{name} list search operation query model.", Resource)
 @friendlyName("{name}ListSearchRequest", Resource)
-@withVisibility(Shared.Lifecycle.Query)
+@withVisibility(Lifecycle.Query)
 model ResourceGridListSearchRequest<Resource extends {}> {
   ...ResourceListSearchRequest<Resource>;
   ...Pagination;
@@ -433,13 +433,13 @@ interface ResourceGridOperations<
 @message
 model Pagination {
   @query
-  @visibility(Shared.Lifecycle.Query)
+  @visibility(Lifecycle.Query)
   @field(1001)
   @pageIndex
   page?: int32;
 
   @query
-  @visibility(Shared.Lifecycle.Query)
+  @visibility(Lifecycle.Query)
   @field(1002)
   @pageSize
   pageSize?: int32;
@@ -469,7 +469,7 @@ model Sort {
    * - title.asc
    */
   @query
-  @visibility(Shared.Lifecycle.Query)
+  @visibility(Lifecycle.Query)
   @field(1003)
   orders?: string[];
 }
@@ -548,7 +548,7 @@ model Filter {
    * - title.contains.hoge
    */
   @query
-  @visibility(Shared.Lifecycle.Query)
+  @visibility(Lifecycle.Query)
   @field(1004)
   filters?: string[];
 }
