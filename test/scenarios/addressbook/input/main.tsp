@@ -4,9 +4,7 @@ import "@typespec/protobuf";
 using TypeSpec.Protobuf;
 using TypeSpec.Http;
 
-@TypeSpec.service({
-  title: "Address Book",
-})
+@TypeSpec.service(#{ title: "Address Book" })
 @package({
   name: "addressbook",
 })
@@ -23,7 +21,7 @@ interface AddressBook {
 }
 
 model Book {
-  @visibility("update")
+  @visibility(Lifecycle.Update)
   @path
   @field(1)
   id: string;

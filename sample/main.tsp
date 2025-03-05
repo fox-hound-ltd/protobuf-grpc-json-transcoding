@@ -4,9 +4,7 @@ import "@typespec/rest";
 
 using TypeSpec.Http;
 using TypeSpec.Protobuf;
-@TypeSpec.service({
-  title: "Greet",
-})
+@TypeSpec.service(#{ title: "Greet" })
 @package({
   name: "greet",
 })

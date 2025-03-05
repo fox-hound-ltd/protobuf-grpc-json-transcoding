@@ -28,7 +28,7 @@ describe('common', () => {
   });
   it('emit with google.api.http option', async () => {
     const results = await emit(`
-    @TypeSpec.service({
+    @TypeSpec.service(#{
       title: "Address Book",
     })
     @package({
@@ -52,25 +52,25 @@ describe('common', () => {
   });
   it(`emit with multiple body not allowed`, async () => {
     const results = await emit(`
-    @TypeSpec.service({
+    @TypeSpec.service(#{
       title: "Address Book",
     })
     @package({
       name: "addressbook",
     })
     namespace AddressBookNamespace;
-    
+
     model Book {
       @field(1) id: string;
       @field(2) author: Author;
       @field(3) publisher: Publisher;
     }
-    
+
     model Author {
       @field(1) id: string;
       @field(2) name: string;
     }
-    
+
     model Publisher {
       @field(1) id: string;
       @field(2) name: string;
