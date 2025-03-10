@@ -15,35 +15,35 @@ importers:
     dependencies:
       '@typespec/compiler':
         specifier: ~0.66.0
-        version: 0.66.0(@types/node@22.13.8)
+        version: 0.66.0(@types/node@22.13.10)
       '@typespec/http':
         specifier: ~0.66.0
-        version: 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8))
+        version: 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10))
       '@typespec/openapi':
         specifier: ~0.66.0
-        version: 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8))(@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8)))
+        version: 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10))(@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10)))
       '@typespec/openapi3':
         specifier: ~0.66.0
-        version: 0.66.0(patch_hash=mbwuzk7cgukr4aqout2qfqtfja)(@typespec/compiler@0.66.0(@types/node@22.13.8))(@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8)))(@typespec/openapi@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8))(@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8))))(@typespec/versioning@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8)))
+        version: 0.66.0(patch_hash=mbwuzk7cgukr4aqout2qfqtfja)(@typespec/compiler@0.66.0(@types/node@22.13.10))(@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10)))(@typespec/openapi@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10))(@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10))))(@typespec/versioning@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10)))
       '@typespec/protobuf':
         specifier: ~0.66.0
-        version: 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8))
+        version: 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10))
       '@typespec/rest':
         specifier: ~0.66.0
-        version: 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8))(@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8)))
+        version: 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10))(@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10)))
       '@typespec/versioning':
         specifier: ~0.66.0
-        version: 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8))
+        version: 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10))
     devDependencies:
       '@trivago/prettier-plugin-sort-imports':
         specifier: ^5.2.2
         version: 5.2.2(prettier@3.5.3)
       '@types/node':
         specifier: latest
-        version: 22.13.8
+        version: 22.13.10
       '@typespec/prettier-plugin-typespec':
         specifier: latest
-        version: 0.65.0
+        version: 0.66.0
       eslint:
         specifier: ^9.21.0
         version: 9.21.0
@@ -67,7 +67,7 @@ importers:
         version: 8.26.0(eslint@9.21.0)(typescript@5.6.3)
       vitest:
         specifier: ^3.0.7
-        version: 3.0.7(@types/node@22.13.8)(yaml@2.7.0)
+        version: 3.0.7(@types/node@22.13.10)(yaml@2.7.0)
 
 packages:
 
@@ -704,8 +704,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@22.13.8':
-    resolution: {integrity: sha512-G3EfaZS+iOGYWLLRCEAXdWK9my08oHNZ+FHluRiggIYJPOXzhOiDgpVCUHaUvyIC5/fj7C/p637jdzC666AOKQ==}
+  '@types/node@22.13.10':
+    resolution: {integrity: sha512-I6LPUvlRH+O6VRUqYOcMudhaIdUVWfsjnZavnsraHvpBwaEyMN29ry+0UVJhImYL16xsscu0aske3yA+uPOWfw==}
 
   '@typescript-eslint/eslint-plugin@8.26.0':
     resolution: {integrity: sha512-cLr1J6pe56zjKYajK6SSSre6nl1Gj6xDp1TY0trpgPzjVbgDwd09v2Ws37LABxzkicmUjhEeg/fAUjPJJB1v5Q==}
@@ -793,8 +793,8 @@ packages:
       '@typespec/compiler': ~0.66.0
       '@typespec/http': ~0.66.0
 
-  '@typespec/prettier-plugin-typespec@0.65.0':
-    resolution: {integrity: sha512-xk8RHulJiEEg61TEU2Bvwnq8V1C+2pilod1QvTtp23rFB4PqPPrX3f4MXwvVk+pI1M7Eqi1Ga759o8J4R9t6vg==}
+  '@typespec/prettier-plugin-typespec@0.66.0':
+    resolution: {integrity: sha512-6awOkkPyx9GKV/x9YGCE95rexKnPOIiHOCbDWCDs7A1gJEIwlzacSULFny2VrhnSSNmpx6Z3d21Z/2Nj0ic+Bg==}
 
   '@typespec/protobuf@0.66.0':
     resolution: {integrity: sha512-GUjhkpAuOUByJFylDw62jirLYTQGmxawlsEBaWq566EHMvy00DWwa6IPLk57IyR0HVsDy3EgHfvmo8gWcVY4sQ==}
@@ -2349,27 +2349,27 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.2': {}
 
-  '@inquirer/checkbox@4.1.2(@types/node@22.13.8)':
+  '@inquirer/checkbox@4.1.2(@types/node@22.13.10)':
     dependencies:
-      '@inquirer/core': 10.1.7(@types/node@22.13.8)
+      '@inquirer/core': 10.1.7(@types/node@22.13.10)
       '@inquirer/figures': 1.0.10
-      '@inquirer/type': 3.0.4(@types/node@22.13.8)
+      '@inquirer/type': 3.0.4(@types/node@22.13.10)
       ansi-escapes: 4.3.2
       yoctocolors-cjs: 2.1.2
     optionalDependencies:
-      '@types/node': 22.13.8
+      '@types/node': 22.13.10
 
-  '@inquirer/confirm@5.1.6(@types/node@22.13.8)':
+  '@inquirer/confirm@5.1.6(@types/node@22.13.10)':
     dependencies:
-      '@inquirer/core': 10.1.7(@types/node@22.13.8)
-      '@inquirer/type': 3.0.4(@types/node@22.13.8)
+      '@inquirer/core': 10.1.7(@types/node@22.13.10)
+      '@inquirer/type': 3.0.4(@types/node@22.13.10)
     optionalDependencies:
-      '@types/node': 22.13.8
+      '@types/node': 22.13.10
 
-  '@inquirer/core@10.1.7(@types/node@22.13.8)':
+  '@inquirer/core@10.1.7(@types/node@22.13.10)':
     dependencies:
       '@inquirer/figures': 1.0.10
-      '@inquirer/type': 3.0.4(@types/node@22.13.8)
+      '@inquirer/type': 3.0.4(@types/node@22.13.10)
       ansi-escapes: 4.3.2
       cli-width: 4.1.0
       mute-stream: 2.0.0
@@ -2377,93 +2377,93 @@ snapshots:
       wrap-ansi: 6.2.0
       yoctocolors-cjs: 2.1.2
     optionalDependencies:
-      '@types/node': 22.13.8
+      '@types/node': 22.13.10
 
-  '@inquirer/editor@4.2.7(@types/node@22.13.8)':
+  '@inquirer/editor@4.2.7(@types/node@22.13.10)':
     dependencies:
-      '@inquirer/core': 10.1.7(@types/node@22.13.8)
-      '@inquirer/type': 3.0.4(@types/node@22.13.8)
+      '@inquirer/core': 10.1.7(@types/node@22.13.10)
+      '@inquirer/type': 3.0.4(@types/node@22.13.10)
       external-editor: 3.1.0
     optionalDependencies:
-      '@types/node': 22.13.8
+      '@types/node': 22.13.10
 
-  '@inquirer/expand@4.0.9(@types/node@22.13.8)':
+  '@inquirer/expand@4.0.9(@types/node@22.13.10)':
     dependencies:
-      '@inquirer/core': 10.1.7(@types/node@22.13.8)
-      '@inquirer/type': 3.0.4(@types/node@22.13.8)
+      '@inquirer/core': 10.1.7(@types/node@22.13.10)
+      '@inquirer/type': 3.0.4(@types/node@22.13.10)
       yoctocolors-cjs: 2.1.2
     optionalDependencies:
-      '@types/node': 22.13.8
+      '@types/node': 22.13.10
 
   '@inquirer/figures@1.0.10': {}
 
-  '@inquirer/input@4.1.6(@types/node@22.13.8)':
+  '@inquirer/input@4.1.6(@types/node@22.13.10)':
     dependencies:
-      '@inquirer/core': 10.1.7(@types/node@22.13.8)
-      '@inquirer/type': 3.0.4(@types/node@22.13.8)
+      '@inquirer/core': 10.1.7(@types/node@22.13.10)
+      '@inquirer/type': 3.0.4(@types/node@22.13.10)
     optionalDependencies:
-      '@types/node': 22.13.8
+      '@types/node': 22.13.10
 
-  '@inquirer/number@3.0.9(@types/node@22.13.8)':
+  '@inquirer/number@3.0.9(@types/node@22.13.10)':
     dependencies:
-      '@inquirer/core': 10.1.7(@types/node@22.13.8)
-      '@inquirer/type': 3.0.4(@types/node@22.13.8)
+      '@inquirer/core': 10.1.7(@types/node@22.13.10)
+      '@inquirer/type': 3.0.4(@types/node@22.13.10)
     optionalDependencies:
-      '@types/node': 22.13.8
+      '@types/node': 22.13.10
 
-  '@inquirer/password@4.0.9(@types/node@22.13.8)':
+  '@inquirer/password@4.0.9(@types/node@22.13.10)':
     dependencies:
-      '@inquirer/core': 10.1.7(@types/node@22.13.8)
-      '@inquirer/type': 3.0.4(@types/node@22.13.8)
+      '@inquirer/core': 10.1.7(@types/node@22.13.10)
+      '@inquirer/type': 3.0.4(@types/node@22.13.10)
       ansi-escapes: 4.3.2
     optionalDependencies:
-      '@types/node': 22.13.8
+      '@types/node': 22.13.10
 
-  '@inquirer/prompts@7.3.2(@types/node@22.13.8)':
+  '@inquirer/prompts@7.3.2(@types/node@22.13.10)':
     dependencies:
-      '@inquirer/checkbox': 4.1.2(@types/node@22.13.8)
-      '@inquirer/confirm': 5.1.6(@types/node@22.13.8)
-      '@inquirer/editor': 4.2.7(@types/node@22.13.8)
-      '@inquirer/expand': 4.0.9(@types/node@22.13.8)
-      '@inquirer/input': 4.1.6(@types/node@22.13.8)
-      '@inquirer/number': 3.0.9(@types/node@22.13.8)
-      '@inquirer/password': 4.0.9(@types/node@22.13.8)
-      '@inquirer/rawlist': 4.0.9(@types/node@22.13.8)
-      '@inquirer/search': 3.0.9(@types/node@22.13.8)
-      '@inquirer/select': 4.0.9(@types/node@22.13.8)
+      '@inquirer/checkbox': 4.1.2(@types/node@22.13.10)
+      '@inquirer/confirm': 5.1.6(@types/node@22.13.10)
+      '@inquirer/editor': 4.2.7(@types/node@22.13.10)
+      '@inquirer/expand': 4.0.9(@types/node@22.13.10)
+      '@inquirer/input': 4.1.6(@types/node@22.13.10)
+      '@inquirer/number': 3.0.9(@types/node@22.13.10)
+      '@inquirer/password': 4.0.9(@types/node@22.13.10)
+      '@inquirer/rawlist': 4.0.9(@types/node@22.13.10)
+      '@inquirer/search': 3.0.9(@types/node@22.13.10)
+      '@inquirer/select': 4.0.9(@types/node@22.13.10)
     optionalDependencies:
-      '@types/node': 22.13.8
+      '@types/node': 22.13.10
 
-  '@inquirer/rawlist@4.0.9(@types/node@22.13.8)':
+  '@inquirer/rawlist@4.0.9(@types/node@22.13.10)':
     dependencies:
-      '@inquirer/core': 10.1.7(@types/node@22.13.8)
-      '@inquirer/type': 3.0.4(@types/node@22.13.8)
+      '@inquirer/core': 10.1.7(@types/node@22.13.10)
+      '@inquirer/type': 3.0.4(@types/node@22.13.10)
       yoctocolors-cjs: 2.1.2
     optionalDependencies:
-      '@types/node': 22.13.8
+      '@types/node': 22.13.10
 
-  '@inquirer/search@3.0.9(@types/node@22.13.8)':
+  '@inquirer/search@3.0.9(@types/node@22.13.10)':
     dependencies:
-      '@inquirer/core': 10.1.7(@types/node@22.13.8)
+      '@inquirer/core': 10.1.7(@types/node@22.13.10)
       '@inquirer/figures': 1.0.10
-      '@inquirer/type': 3.0.4(@types/node@22.13.8)
+      '@inquirer/type': 3.0.4(@types/node@22.13.10)
       yoctocolors-cjs: 2.1.2
     optionalDependencies:
-      '@types/node': 22.13.8
+      '@types/node': 22.13.10
 
-  '@inquirer/select@4.0.9(@types/node@22.13.8)':
+  '@inquirer/select@4.0.9(@types/node@22.13.10)':
     dependencies:
-      '@inquirer/core': 10.1.7(@types/node@22.13.8)
+      '@inquirer/core': 10.1.7(@types/node@22.13.10)
       '@inquirer/figures': 1.0.10
-      '@inquirer/type': 3.0.4(@types/node@22.13.8)
+      '@inquirer/type': 3.0.4(@types/node@22.13.10)
       ansi-escapes: 4.3.2
       yoctocolors-cjs: 2.1.2
     optionalDependencies:
-      '@types/node': 22.13.8
+      '@types/node': 22.13.10
 
-  '@inquirer/type@3.0.4(@types/node@22.13.8)':
+  '@inquirer/type@3.0.4(@types/node@22.13.10)':
     optionalDependencies:
-      '@types/node': 22.13.8
+      '@types/node': 22.13.10
 
   '@isaacs/cliui@8.0.2':
     dependencies:
@@ -2760,7 +2760,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@22.13.8':
+  '@types/node@22.13.10':
     dependencies:
       undici-types: 6.20.0
 
@@ -2841,10 +2841,10 @@ snapshots:
       '@typescript-eslint/types': 8.26.0
       eslint-visitor-keys: 4.2.0
 
-  '@typespec/compiler@0.66.0(@types/node@22.13.8)':
+  '@typespec/compiler@0.66.0(@types/node@22.13.10)':
     dependencies:
       '@babel/code-frame': 7.26.2
-      '@inquirer/prompts': 7.3.2(@types/node@22.13.8)
+      '@inquirer/prompts': 7.3.2(@types/node@22.13.10)
       '@npmcli/arborist': 8.0.0
       ajv: 8.17.1
       change-case: 5.4.4
@@ -2864,41 +2864,41 @@ snapshots:
       - bluebird
       - supports-color
 
-  '@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8))':
+  '@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10))':
     dependencies:
-      '@typespec/compiler': 0.66.0(@types/node@22.13.8)
+      '@typespec/compiler': 0.66.0(@types/node@22.13.10)
 
-  '@typespec/openapi3@0.66.0(patch_hash=mbwuzk7cgukr4aqout2qfqtfja)(@typespec/compiler@0.66.0(@types/node@22.13.8))(@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8)))(@typespec/openapi@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8))(@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8))))(@typespec/versioning@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8)))':
+  '@typespec/openapi3@0.66.0(patch_hash=mbwuzk7cgukr4aqout2qfqtfja)(@typespec/compiler@0.66.0(@types/node@22.13.10))(@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10)))(@typespec/openapi@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10))(@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10))))(@typespec/versioning@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10)))':
     dependencies:
       '@apidevtools/swagger-parser': 10.1.1(openapi-types@12.1.3)
-      '@typespec/compiler': 0.66.0(@types/node@22.13.8)
-      '@typespec/http': 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8))
-      '@typespec/openapi': 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8))(@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8)))
-      '@typespec/versioning': 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8))
+      '@typespec/compiler': 0.66.0(@types/node@22.13.10)
+      '@typespec/http': 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10))
+      '@typespec/openapi': 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10))(@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10)))
+      '@typespec/versioning': 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10))
       openapi-types: 12.1.3
       yaml: 2.7.0
 
-  '@typespec/openapi@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8))(@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8)))':
+  '@typespec/openapi@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10))(@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10)))':
     dependencies:
-      '@typespec/compiler': 0.66.0(@types/node@22.13.8)
-      '@typespec/http': 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8))
+      '@typespec/compiler': 0.66.0(@types/node@22.13.10)
+      '@typespec/http': 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10))
 
-  '@typespec/prettier-plugin-typespec@0.65.0':
+  '@typespec/prettier-plugin-typespec@0.66.0':
     dependencies:
       prettier: 3.4.2
 
-  '@typespec/protobuf@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8))':
+  '@typespec/protobuf@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10))':
     dependencies:
-      '@typespec/compiler': 0.66.0(@types/node@22.13.8)
+      '@typespec/compiler': 0.66.0(@types/node@22.13.10)
 
-  '@typespec/rest@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8))(@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8)))':
+  '@typespec/rest@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10))(@typespec/http@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10)))':
     dependencies:
-      '@typespec/compiler': 0.66.0(@types/node@22.13.8)
-      '@typespec/http': 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8))
+      '@typespec/compiler': 0.66.0(@types/node@22.13.10)
+      '@typespec/http': 0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10))
 
-  '@typespec/versioning@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.8))':
+  '@typespec/versioning@0.66.0(@typespec/compiler@0.66.0(@types/node@22.13.10))':
     dependencies:
-      '@typespec/compiler': 0.66.0(@types/node@22.13.8)
+      '@typespec/compiler': 0.66.0(@types/node@22.13.10)
 
   '@vitest/expect@3.0.7':
     dependencies:
@@ -2907,13 +2907,13 @@ snapshots:
       chai: 5.2.0
       tinyrainbow: 2.0.0
 
-  '@vitest/mocker@3.0.7(vite@6.2.0(@types/node@22.13.8)(yaml@2.7.0))':
+  '@vitest/mocker@3.0.7(vite@6.2.0(@types/node@22.13.10)(yaml@2.7.0))':
     dependencies:
       '@vitest/spy': 3.0.7
       estree-walker: 3.0.3
       magic-string: 0.30.17
     optionalDependencies:
-      vite: 6.2.0(@types/node@22.13.8)(yaml@2.7.0)
+      vite: 6.2.0(@types/node@22.13.10)(yaml@2.7.0)
 
   '@vitest/pretty-format@3.0.7':
     dependencies:
@@ -4104,13 +4104,13 @@ snapshots:
 
   validate-npm-package-name@6.0.0: {}
 
-  vite-node@3.0.7(@types/node@22.13.8)(yaml@2.7.0):
+  vite-node@3.0.7(@types/node@22.13.10)(yaml@2.7.0):
     dependencies:
       cac: 6.7.14
       debug: 4.4.0
       es-module-lexer: 1.6.0
       pathe: 2.0.3
-      vite: 6.2.0(@types/node@22.13.8)(yaml@2.7.0)
+      vite: 6.2.0(@types/node@22.13.10)(yaml@2.7.0)
     transitivePeerDependencies:
       - '@types/node'
       - jiti
@@ -4125,20 +4125,20 @@ snapshots:
       - tsx
       - yaml
 
-  vite@6.2.0(@types/node@22.13.8)(yaml@2.7.0):
+  vite@6.2.0(@types/node@22.13.10)(yaml@2.7.0):
     dependencies:
       esbuild: 0.25.0
       postcss: 8.5.3
       rollup: 4.34.9
     optionalDependencies:
-      '@types/node': 22.13.8
+      '@types/node': 22.13.10
       fsevents: 2.3.3
       yaml: 2.7.0
 
-  vitest@3.0.7(@types/node@22.13.8)(yaml@2.7.0):
+  vitest@3.0.7(@types/node@22.13.10)(yaml@2.7.0):
     dependencies:
       '@vitest/expect': 3.0.7
-      '@vitest/mocker': 3.0.7(vite@6.2.0(@types/node@22.13.8)(yaml@2.7.0))
+      '@vitest/mocker': 3.0.7(vite@6.2.0(@types/node@22.13.10)(yaml@2.7.0))
       '@vitest/pretty-format': 3.0.7
       '@vitest/runner': 3.0.7
       '@vitest/snapshot': 3.0.7
@@ -4154,11 +4154,11 @@ snapshots:
       tinyexec: 0.3.2
       tinypool: 1.0.2
       tinyrainbow: 2.0.0
-      vite: 6.2.0(@types/node@22.13.8)(yaml@2.7.0)
-      vite-node: 3.0.7(@types/node@22.13.8)(yaml@2.7.0)
+      vite: 6.2.0(@types/node@22.13.10)(yaml@2.7.0)
+      vite-node: 3.0.7(@types/node@22.13.10)(yaml@2.7.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 22.13.8
+      '@types/node': 22.13.10
     transitivePeerDependencies:
       - jiti
       - less
