@@ -37,7 +37,7 @@ service Widgets {
     };
   }
   // Lists all instances of the Widget.
-  rpc List(resource.WidgetQueryListSearchRequest) returns (resource.WidgetCollectionWithCountResponse) {
+  rpc List(resource.WidgetQueryListSearchRequest) returns (resource.WidgetCollectionWithTotalResponse) {
     option (google.api.http) = {
       get: "/widgets"
     };

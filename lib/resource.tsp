@@ -132,8 +132,8 @@ model Collection<Resource extends {}> {
  * @template Resource The resource model.
  */
 @doc("Response of {name} items", Resource)
-@friendlyName("{name}CollectionWithCountResponse", Resource)
-model CollectionWithCount<Resource extends {}> {
+@friendlyName("{name}CollectionWithTotalResponse", Resource)
+model CollectionWithTotal<Resource extends {}> {
   @doc("The items on this page")
   @field(1)
   value: ResourceResponse<Resource>[];
@@ -350,7 +350,7 @@ interface ResourceGridList<Resource extends {}, SearchResource extends {}> {
   List(
     ...ResourceCollectionParameters<Resource>,
     ...ResourceGridListSearchRequest<SearchResource>,
-  ): CollectionWithCount<Resource>;
+  ): CollectionWithTotal<Resource>;
 }
 
 /**

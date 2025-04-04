@@ -33,7 +33,7 @@ message WidgetQueryListSearchRequest {
 }
 
 // Response of Widget items
-message WidgetCollectionWithCountResponse {
+message WidgetCollectionWithTotalResponse {
   repeated WidgetResponse value = 1; // The items on this page
   int32 total = 2; // The total count of items
 }
