@@ -50,8 +50,9 @@ message WidgetQueryListSearchRequest {
 }
 
 // Response of Widget items
-message WidgetCollectionResponse {
+message WidgetCollectionWithCountResponse {
   repeated WidgetResponse value = 1; // The items on this page
+  int32 total = 2; // The total count of items
 }
 
 // Widget create operation model.
@@ -63,6 +64,11 @@ message WidgetCreateRequest {
 // Widget create collection operation model.
 message WidgetCreateCollectionRequest {
   repeated WidgetCreateRequest value = 1; // The items on create
+}
+
+// Response of Widget items
+message WidgetCollectionResponse {
+  repeated WidgetResponse value = 1; // The items on this page
 }
 
 // Widget update collection operation model.
