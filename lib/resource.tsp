@@ -126,6 +126,22 @@ model Collection<Resource extends {}> {
   @field(1)
   value: ResourceResponse<Resource>[];
 }
+/**
+ * Represents response of resource items.
+ *
+ * @template Resource The resource model.
+ */
+@doc("Response of {name} items", Resource)
+@friendlyName("{name}CollectionWithCountResponse", Resource)
+model CollectionWithCount<Resource extends {}> {
+  @doc("The items on this page")
+  @field(1)
+  value: ResourceResponse<Resource>[];
+
+  @doc("The total count of items")
+  @field(2)
+  total?: int32;
+}
 
 /**
  * Represents resource create operation model.
@@ -334,7 +350,7 @@ interface ResourceGridList<Resource extends {}, SearchResource extends {}> {
   List(
     ...ResourceCollectionParameters<Resource>,
     ...ResourceGridListSearchRequest<SearchResource>,
-  ): Collection<Resource>;
+  ): CollectionWithCount<Resource>;
 }
 
 /**
