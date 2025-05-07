@@ -1,10 +1,9 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
-import typescriptEslint from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
 import globals from 'globals';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import tseslint from 'typescript-eslint';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -19,9 +18,9 @@ export default [
     ignores: ['node_modules/**/*', 'dist/**/*'],
   },
   ...compat.extends('eslint:recommended', 'plugin:@typescript-eslint/recommended'),
-  {
+  ...tseslint.config({
     plugins: {
-      '@typescript-eslint': typescriptEslint,
+      '@typescript-eslint': tseslint.plugin,
     },
 
     languageOptions: {
@@ -29,11 +28,11 @@ export default [
         ...globals.node,
       },
 
-      parser: tsParser,
+      parser: tseslint.parser,
       ecmaVersion: 'latest',
       sourceType: 'module',
     },
 
     rules: {},
-  },
+  }),
 ];
