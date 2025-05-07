@@ -223,6 +223,7 @@ interface ResourceUpdate<Resource extends {}, RequestResource extends {}> {
   @autoRoute
   @doc("Updates an existing instance of the {name}.", Resource)
   @updatesResource(Resource)
+  @patch(#{ implicitOptionality: false })
   Update(...ResourceUpdateParameterRequest<Resource, RequestResource>): ResourceResponse<Resource>;
 }
 
@@ -239,7 +240,7 @@ interface ResourceUpdateMany<Resource extends {}, RequestResource extends {}> {
    */
   @autoRoute
   @doc("Updates existing instances of the {name}.", Resource)
-  @patch
+  @patch(#{ implicitOptionality: false })
   UpdateMany(
     ...ResourceCollectionParameters<Resource>,
     ...ResourceUpdateCollectionRequest<Resource, RequestResource>,

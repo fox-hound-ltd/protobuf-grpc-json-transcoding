@@ -34,7 +34,7 @@ interface Widgets {
   };
   @get read(@field(1) @path id: string): Widget;
   @post create(...Widget): Widget;
-  @patch update(...Widget): Widget;
+  @patch(#{ implicitOptionality: false }) update(...Widget): Widget;
   @delete delete(@field(1) @path id: string): void;
   @route("{id}/analyze") @post analyze(@field(1) @path id: string): {
     @field(1) result: string;
