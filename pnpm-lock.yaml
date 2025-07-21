@@ -44,7 +44,7 @@ importers:
         version: 22.16.0
       '@typespec/prettier-plugin-typespec':
         specifier: latest
-        version: 1.1.0
+        version: 1.2.1
       eslint:
         specifier: ^9.30.1
         version: 9.31.0
@@ -747,8 +747,8 @@ packages:
       '@typespec/compiler': ^1.1.0
       '@typespec/http': ^1.1.0
 
-  '@typespec/prettier-plugin-typespec@1.1.0':
-    resolution: {integrity: sha512-Wi2ShQdbSXDq+sysguTXq4o1vVIQNZreyy0COVL3DnMZbq92TH0d9dtexOqEJsNsCbfx4RFD5il4dAbSX1/88w==}
+  '@typespec/prettier-plugin-typespec@1.2.1':
+    resolution: {integrity: sha512-RCMHl8r5BRS8+xi+Pj60d9W5lLCG/iQfVuctnL69bqUVYHnrK2ffcjHTTr0TRmDqXpxKFqFTtYJdurBaW1OjCg==}
 
   '@typespec/protobuf@0.71.0':
     resolution: {integrity: sha512-z9ZYUw+nrSV/CHCfkfW7d0RiizgCfJjG0zs9Ku80qx0lsqhTT6VBAh5QfEB91rxJCPg70p9FaZFfwvUvYDSBtw==}
@@ -2396,7 +2396,7 @@ snapshots:
       '@typespec/compiler': 1.1.0(@types/node@22.16.0)
       '@typespec/http': 1.1.0(@typespec/compiler@1.1.0(@types/node@22.16.0))
 
-  '@typespec/prettier-plugin-typespec@1.1.0':
+  '@typespec/prettier-plugin-typespec@1.2.1':
     dependencies:
       prettier: 3.5.3
 
